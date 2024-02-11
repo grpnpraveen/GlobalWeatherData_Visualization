@@ -1,0 +1,29 @@
+Buzz Songs in 2023 
+
+track_name (main)
+artist(s)_name (main)
+
+
+
+Categorical:
+
+released_year ->Year 
+released_month -> Month
+Key -> Key
+artist_count (how many artists)
+
+
+Numerical: 
+
+in_spotify_playlists -> spotify pl
+streams -> how many streams 
+in_apple_playlists -> apple pl
+in_deezer_playlists -> deezer pl
+bpm ->  Beats
+danceability_%
+valence_%
+energy_%
+acousticness_%
+instrumentalness_%
+liveness_%
+speechiness_%
