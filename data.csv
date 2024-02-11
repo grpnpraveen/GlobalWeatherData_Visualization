@@ -1,0 +1,201 @@
+country,location_name,timezone,temperature_celsius,condition_text,wind_kph,wind_direction,pressure_in,humidity,feels_like_celsius,visibility_km,uv_index,air_quality_Carbon_Monoxide,air_quality_Ozone,air_quality_Nitrogen_dioxide,air_quality_Sulphur_dioxide,moon_phase,moon_illumination
+Argentina,Buenos Aires,America/Argentina/Buenos_Aires,22,Sunny,25.9,ESE,29.97,65,24.2,10,6,303.8,64.4,12,25.5,Waxing Crescent,27
+Norway,Oslo,Europe/Oslo,2,Clear,3.6,N,30.18,80,1,10,1,340.5,15.6,15.3,4.8,Waning Gibbous,91
+Ireland,Dublin,Europe/Dublin,6,Partly cloudy,6.8,ESE,29.71,87,3.5,10,1,363.8,0.1,40.1,15.3,First Quarter,48
+Tonga,Nuku`Aloia,Pacific/Tongatapu,26,Partly cloudy,31,E,29.94,84,28.7,10,9,201.9,19.5,0.1,0.3,Waxing Crescent,1
+Dominica,Roseau,America/Dominica,26,Light rain,6.8,SE,29.8,84,28.4,10,6,213.6,26.5,1.2,0.3,Full Moon,99
+Gambia,Banjul,Africa/Banjul,33,Sunny,11.2,N,29.8,32,41.7,10,7,257,93,0.8,0.7,New Moon,1
+Thailand,Nan,Asia/Bangkok,19.9,Clear,3.6,NNE,29.85,41,19.9,10,1,423.9,26.8,4.5,2.5,Waning Crescent,12
+Belarus,Minsk,Europe/Minsk,-11,Light snow,15.1,SE,29.44,85,-19.2,6,1,320.4,28.3,19.4,13.6,Last Quarter,51
+Haiti,Port-Au-Prince,America/Port-au-Prince,32,Partly cloudy,24.1,ESE,29.83,63,43.4,10,6,1014.7,55.1,11.5,8.9,Waning Crescent,46
+Costa Rica,San Juan,America/Costa_Rica,26,Sunny,25.9,E,30.06,48,25.9,10,7,257,105.9,3,13.5,Waxing Crescent,9
+Central African Republic,Bangui,Africa/Bangui,23.8,Clear,5.8,E,29.87,80,25.7,10,1,330.5,0.4,0.4,0.3,Waning Gibbous,92
+Samoa,Apia,Pacific/Apia,26,Light rain,6.1,S,29.88,94,28.5,9,7,263.7,6.9,3.3,1.4,Full Moon,99
+Nigeria,Abuja,Africa/Lagos,34,Mist,6.1,W,29.88,23,32,3,8,547.4,50.1,3.8,0.8,New Moon,2
+Saudi Arabia,Riyadh,Asia/Riyadh,20,Clear,6.1,SE,30.09,53,20,10,1,734.3,0,122,50.6,Waning Gibbous,70
+Haiti,Port-Au-Prince,America/Port-au-Prince,32,Partly cloudy,16.9,WNW,29.85,63,45.9,9,6,794.4,140.2,3,4.3,Waxing Crescent,22
+Nepal,Kathmandu,Asia/Kathmandu,13,Partly cloudy,6.1,SSW,30.18,88,13.3,7,1,1655.6,24.3,22.3,4.4,Full Moon,100
+Iraq,Baghdad,Asia/Baghdad,22,Partly cloudy,3.6,ESE,29.98,53,23.9,10,1,1895.9,0,134.4,60.6,Waxing Gibbous,71
+Malaysia,Kuala Lumpur,Asia/Kuala_Lumpur,26,Moderate or heavy rain with thunder,16.9,WSW,29.85,89,29.3,10,1,2723.7,0,28.8,50.6,Waxing Crescent,0
+Sierra Leone,Freetown,Africa/Freetown,26.3,Patchy rain possible,10.1,WSW,29.91,88,29.7,9,1,273.7,16.3,0.8,0.2,Waning Crescent,13
+Vietnam,Hanoi,Asia/Bangkok,26,Partly cloudy,13,SE,29.88,89,29.8,7,1,1295.1,0,49.4,26.7,Waning Crescent,26
+Pakistan,Islamabad,Asia/Karachi,12,Cloudy,6.8,NNE,30.04,20,11.6,10,1,2296.5,28.3,80.2,8.8,Waxing Gibbous,64
+Democratic Republic of Congo,Kinshasa,Africa/Brazzaville,27,Patchy light rain with thunder,3.6,E,29.83,70,28.2,9,9,867.8,73,12.5,2.9,Waning Crescent,12
+Sudan,Juba,Africa/Khartoum,24.4,Partly cloudy,14.4,WSW,29.86,62,25.8,10,1,307.1,8.9,1.1,0.2,Waxing Crescent,8
+North Korea,Pyongyang,Asia/Pyongyang,15.2,Sunny,5,NNW,30,61,15.2,10,5,407.2,23.6,8.6,3.6,Waxing Gibbous,97
+Philippines,Manila,Asia/Manila,26,Light rain,3.6,ENE,29.83,94,28.2,10,1,270.4,42.2,5.7,4.2,Waning Gibbous,99
+Ireland,Dublin,Europe/Dublin,17,Partly cloudy,20.2,SW,30.03,88,17,10,1,227,72.2,3.2,1.7,Last Quarter,56
+Mauritius,Port Louis,Indian/Mauritius,24,Partly cloudy,6.1,E,30.06,83,26,10,1,250.3,33.6,2.6,2.7,Waning Gibbous,100
+Bhutan,Thimphu,Asia/Thimphu,11.9,Partly cloudy,3.6,NNE,29.78,94,11.9,10,1,260.4,18.4,0.3,0,Waning Crescent,22
+Tonga,Nuku`Aloia,Pacific/Tongatapu,26,Partly cloudy,6.8,SE,29.71,94,29,10,1,207,14,0.4,0.5,Waning Crescent,6
+United Arab Emirates,Abu Dhabi,Asia/Dubai,30,Clear,6.1,NE,29.88,66,33.3,10,1,200.3,113,0.2,0.4,Waxing Gibbous,71
+Kuwait,Kuwait City,Asia/Kuwait,29.2,Clear,17.6,ESE,29.88,42,29.4,10,1,433.9,59.4,76.1,30.3,Waxing Crescent,11
+India,New Delhi,Asia/Kolkata,23,Mist,3.6,N,29.77,61,23.2,3,1,1014.7,47.9,22.3,13.1,Waning Gibbous,91
+Nepal,Kathmandu,Asia/Kathmandu,8,Partly cloudy,6.1,ESE,30.09,81,7.5,7,1,2349.9,26.5,36,15.3,Waning Crescent,3
+Morocco,Rabat,Africa/Casablanca,11,Clear,6.1,E,30.24,82,8.7,5,1,210.3,101.6,0.3,0.3,Waning Crescent,35
+Burkina Faso,Ouagadougou,Africa/Ouagadougou,25.8,Patchy rain possible,9.7,SW,29.91,78,28.1,10,1,867.8,5.5,5.5,2.1,Waning Gibbous,79
+Turkey,Yaren,Europe/Istanbul,16,Clear,3.6,N,30.06,59,16,10,1,227,32.5,7.9,0.7,First Quarter,48
+United Kingdom,London,Europe/London,9,Clear,19.1,WSW,29.85,87,6.5,10,1,257,41.8,18,5.5,Waxing Crescent,0
+Central African Republic,Bangui,Africa/Bangui,22.7,Light rain shower,5.4,SSE,29.86,95,25.1,10,1,413.9,0.1,1.2,0.6,Waning Crescent,18
+Belarus,Minsk,Europe/Minsk,1,Partly cloudy,25.9,W,29.88,86,-4.8,10,1,243.7,57.9,2.1,0.5,Full Moon,100
+Kenya,Nairobi,Africa/Nairobi,17,Partly cloudy,6.8,ENE,30.24,77,17,10,1,460.6,35.8,4.1,3.9,Full Moon,98
+Bhutan,Thimphu,Asia/Thimphu,3.1,Clear,6.5,NNE,30.21,87,1.3,10,1,317.1,32.5,2.3,0.1,Waxing Crescent,34
+Belgium,S Gravenstaffel,Europe/Brussels,9,Partly cloudy,28.1,SW,30.06,87,5,10,1,230.3,68.7,4,0.9,Waning Crescent,30
+Belgium,Brussels,Europe/Brussels,11,Light rain,6.8,ESE,29.12,87,10,10,1,270.4,29.7,21.4,1.6,Waxing Crescent,0
+Equatorial Guinea,Malabo,Africa/Malabo,26,Partly cloudy,11.2,WSW,29.91,94,29.1,10,1,330.5,23.3,0.1,0.1,Waning Crescent,13
+Equatorial Guinea,Malabo,Africa/Malabo,30,Partly cloudy,13,WSW,29.83,84,35.6,8,7,390.5,28.6,0,0,New Moon,2
+China,Beijing,Asia/Shanghai,1,Clear,25.9,NW,30.27,37,-3.6,10,1,330.5,62.2,17,17.4,Waning Gibbous,91
+Namibia,Windhoek,Africa/Windhoek,20,Sunny,6.1,WNW,30.45,43,20,10,7,347.1,107.3,0.7,0.5,Waxing Gibbous,93
+Israel,Jerusalem,Asia/Jerusalem,27,Clear,13,ENE,29.94,42,28.7,10,1,367.2,40.4,66.5,12.8,Waning Gibbous,100
+Hungary,Budapest,Europe/Budapest,17,Clear,3.6,SE,29.94,72,17,10,1,794.4,0,66.5,7.3,Waning Crescent,8
+Palau,Adkip,Pacific/Palau,25,Patchy light rain with thunder,6.1,NNE,29.8,94,27.1,19,1,168.6,32.2,0.1,0.1,Waning Crescent,11
+Central African Republic,Bangui,Africa/Bangui,28,Clear,6.1,N,29.8,58,26.2,4,1,363.8,17.5,0.2,0.2,Waning Crescent,23
+Marshall Islands,Majuro,Pacific/Majuro,27.7,Patchy rain possible,38.5,ENE,29.77,81,31.8,10,1,200.3,65.8,0,0.3,Waxing Crescent,1
+Vatican City,Vatican City,Europe/Rome,22,Clear,3.6,NNE,30.03,78,24.6,10,1,741,0.1,25.4,0.5,Waxing Crescent,0
+Mongolia,Ulaanbaatar,Asia/Ulaanbaatar,-7,Clear,3.6,SW,29.83,86,-9.6,10,1,293.7,64.4,9.4,56.7,Waxing Gibbous,60
+Vatican City,Vatican City,Europe/Rome,20,Clear,6.8,S,30,68,20,10,1,2002.7,0,42.8,3,Waxing Crescent,5
+Comoros,Moroni,Indian/Comoro,25,Clear,5.8,E,29.88,82,27.2,10,1,201.9,22,0.1,0.2,New Moon,1
+Tonga,Nuku`Aloia,Pacific/Tongatapu,24,Partly cloudy,19.1,ENE,30,89,26.1,10,5,223.6,57.2,0.1,0.3,Waning Gibbous,94
+Monaco,Monaco,Europe/Monaco,22,Partly cloudy,3.6,WNW,30.21,88,24.5,10,1,360.5,23.6,21.4,3.9,Waning Gibbous,75
+Croatia,Zagreb,Europe/Zagreb,-3,Freezing fog,6.1,W,30.03,100,-5,0.2,1,727.7,0.1,38.4,0.1,Waning Crescent,25
+India,New Delhi,Asia/Kolkata,29,Mist,11.2,W,29.74,66,29.6,3.5,8,370.5,43.6,9.9,8.6,Full Moon,98
+Albania,Tirana,Europe/Tirane,1,Clear,9,SSE,30.39,75,-0.8,10,1,500.7,9.9,51.4,6.6,Waxing Gibbous,86
+Namibia,Windhoek,Africa/Windhoek,22,Clear,6.1,E,30.21,61,24.5,10,1,303.8,7.5,1.7,2.6,Waxing Crescent,15
+Tanzania,Dodoma,Africa/Dar_es_Salaam,20,Patchy rain nearby,7.6,E,29.92,93,20,9,1,270.4,23.3,1.5,0.3,Waning Crescent,40
+Comoros,Moroni,Indian/Comoro,26.1,Partly cloudy,11.2,NNE,29.93,74,28.3,10,1,267,42.2,0.4,0.1,Waxing Gibbous,64
+Angola,Luanda,Africa/Luanda,26,Partly cloudy,4,S,29.8,94,28.9,9,1,447.3,11,7.8,4.7,Waxing Gibbous,74
+Ghana,Accra,Africa/Accra,31,Overcast,13,E,29.83,38,33.8,1.5,7,580.8,61.5,4,2.7,Waning Crescent,20
+Maldives,Farukolhufunadhoo,Indian/Maldives,27.5,Clear,13,NE,29.97,70,30,10,1,303.8,114.4,0.4,1,Waning Crescent,12
+Jamaica,Norman Gardens,America/Jamaica,28,Overcast,19.1,SSE,29.77,84,35.9,10,6,410.6,51.5,5.5,4.4,Waxing Crescent,8
+Djibouti,Djibouti,Africa/Djibouti,29,Partly cloudy,19.1,ESE,29.91,70,34.4,10,1,293.7,78.7,2.9,3.7,Waxing Gibbous,95
+Bangladesh,Dhaka,Asia/Dhaka,25.9,Moderate or heavy rain shower,9.7,S,29.67,93,29.8,7,1,527.4,9.4,12.9,4.7,Waxing Gibbous,63
+India,New Delhi,Asia/Kolkata,21,Mist,3.6,N,30,78,21,2.5,1,2456.7,0,35.6,19.6,First Quarter,48
+Dominica,Roseau,America/Dominica,32,Partly cloudy,4,NW,29.85,59,39.4,10,7,186.9,60.1,0.6,0.4,Waxing Gibbous,78
+Estonia,Tallinn,Europe/Tallinn,3,Overcast,11.2,NNE,29.88,65,-1.5,10,1,253.7,68.7,3.2,1.3,Waxing Crescent,11
+Mozambique,Maputo,Africa/Maputo,21,Partly cloudy,28.1,SSW,30.06,64,21,10,1,367.2,43.3,2,1.9,First Quarter,48
+Liberia,Monrovia,Africa/Monrovia,25,Partly cloudy,3.6,N,29.94,94,27.7,10,1,310.4,59.4,0.2,0.2,Waxing Crescent,1
+Senegal,Dakar,Africa/Dakar,28.3,Sunny,19.8,WNW,29.85,78,32.7,10,7,212,74.4,0.3,0.5,New Moon,1
+Thailand,Bangkok,Asia/Bangkok,27,Partly cloudy,6.1,E,29.74,89,30.7,10,1,8758.6,0,87.7,62,Waxing Gibbous,52
+Solomon Islands,Honiara,Pacific/Guadalcanal,25.8,Patchy rain possible,3.6,SSE,29.72,88,28.9,10,1,200.3,16.1,0.8,0.4,Waxing Gibbous,86
+Kyrghyzstan,Bishkek,Asia/Bishkek,14.5,Clear,4.3,SW,29.97,45,15,10,1,300.4,2.4,21.6,2.6,Waning Gibbous,99
+Djibouti,Djibouti,Africa/Djibouti,26.8,Clear,14,ESE,30.01,66,28.6,10,1,273.7,75.8,2.3,3.1,Waning Gibbous,92
+Australia,Canberra,Australia/Sydney,7,Sunny,9,SE,30.45,66,4.3,10,3,196.9,52.2,0.9,0.3,Waxing Gibbous,89
+Israel,Jerusalem,Asia/Jerusalem,14,Clear,6.8,NE,30.12,72,13.8,10,1,257,46.5,20.4,2.6,Waning Gibbous,99
+Andorra,Andorra La Vella,Europe/Andorra,-5.4,Clear,9,SSW,30.17,58,-9.4,10,1,205.3,58.7,2.4,0.6,Waning Gibbous,71
+Bolivia,National,America/La_Paz,33,Partly cloudy,5.8,NW,29.77,46,35.9,10,11,190.3,2.9,0.1,0,Waxing Crescent,9
+Peru,Lima,America/Lima,19.7,Partly cloudy,19.4,S,29.91,77,19.7,10,5,243.7,59.4,5.3,3.4,Waning Crescent,46
+Slovenia,Ljubljana,Europe/Ljubljana,-3,Clear,4,W,29.85,93,-4.2,10,1,494,37.6,32.2,2.7,Waxing Crescent,26
+Maldives,Farukolhufunadhoo,Indian/Maldives,27.1,Patchy rain possible,17.6,ESE,29.87,75,29.9,10,1,393.9,98.7,0.2,0.2,Waxing Crescent,26
+Singapore,Singapore,Asia/Singapore,26,Partly cloudy,6.8,N,29.77,89,29.1,10,1,894.6,0,21.1,9.3,Waxing Gibbous,78
+Serbia,Belgrade,Europe/Belgrade,19,Light rain,15.1,S,29.77,78,19,10,1,237,39.7,12.2,9.7,Waxing Crescent,37
+Brazil,Bras,America/Manaus,38.2,Sunny,9.4,E,29.61,25,38.9,10,9,647.5,123,2.8,1.1,Waning Gibbous,84
+Haiti,Port-Au-Prince,America/Port-au-Prince,32,Partly cloudy,6.8,WNW,29.8,63,42,10,7,1388.6,231.7,4.8,8.8,First Quarter,45
+Albania,Tirana,Europe/Tirane,9,Mist,6.8,SE,30.12,93,9.1,6,1,360.5,29.3,28.5,2.2,Waxing Gibbous,96
+Romania,Bucharest,Europe/Bucharest,9,Clear,16.9,W,29.65,87,6.5,10,1,260.4,62.2,3.9,1.2,Last Quarter,51
+Ethiopia,Addis Ababa,Africa/Addis_Ababa,17,Partly cloudy,15.1,NNE,30.33,45,17,10,1,300.4,40.8,2.8,0.4,Waning Gibbous,65
+Belgium,S-Gravenwezel,Europe/Brussels,11,Light rain,6.8,ESE,29.12,87,9.9,10,1,263.7,27.9,20.2,1.7,Waxing Crescent,0
+Senegal,Dakar,Africa/Dakar,29,Partly cloudy,6.8,W,29.85,84,34.7,10,1,220.3,48.6,0.9,0.5,Waning Crescent,7
+Chile,Santiago,America/Santiago,19,Sunny,20.2,S,30,49,19,10,4,3017.4,1.5,61,7.9,Waxing Gibbous,97
+Botswana,Gaborone,Africa/Gaborone,21,Clear,22,ENE,29.94,64,21,10,1,350.5,39,6.6,2.3,Waxing Crescent,2
+Cuba,Havana,America/Havana,26,Partly cloudy,3.6,NE,29.85,100,28.6,9,7,257,41.5,3.2,8.4,Waning Gibbous,96
+Lithuania,Vilnius,Europe/Vilnius,11,Clear,3.6,NW,30.33,71,10.3,10,1,230.3,11.8,6,0.4,Waxing Crescent,0
+Uruguay,Montevideo,America/Montevideo,19,Sunny,28.1,W,29.71,35,19,10,5,217,38.3,1.1,2.7,Waxing Crescent,24
+Romania,Bucharest,Europe/Bucharest,2,Mist,4,W,30.21,80,-0.1,5,1,534.1,5.8,24,1.6,Waning Gibbous,98
+Iraq,Baghdad,Asia/Baghdad,14,Partly cloudy,6.1,ESE,30.16,72,13.5,10,1,1241.7,0,53.5,39.6,Waxing Crescent,20
+Indonesia,Jakarta,Asia/Jakarta,26,Partly cloudy,11.2,SW,29.83,94,27.6,8,1,16235.4,0,170,50.1,Waxing Crescent,2
+Malawi,Lilongwe,Africa/Blantyre,21.6,Patchy rain nearby,4.7,ESE,29.92,77,21.6,9,1,240.3,24.7,0.9,0.2,Waning Gibbous,98
+Vatican City,Vatican City,Europe/Rome,20,Partly cloudy,9,SSE,29.85,73,20,10,1,474,2,21.3,0.5,Full Moon,98
+Ethiopia,Addis Ababa,Africa/Addis_Ababa,11.1,Clear,4.3,ESE,30.14,64,11.2,10,1,3845.2,20.9,23.3,7,Waning Gibbous,86
+Marshall Islands,Majuro,Pacific/Majuro,27,Partly cloudy,20.2,ENE,29.76,84,30.3,24,1,200.3,60.1,0,0.3,New Moon,1
+Liechtenstein,Vaduz,Europe/Vaduz,19,Clear,3.6,S,30.09,100,19,10,1,230.3,25.4,15.6,2.7,Waning Crescent,30
+Equatorial Guinea,Malabo,Africa/Malabo,25.2,Partly cloudy,10.8,WSW,29.93,85,27.7,10,1,373.8,23.3,0.1,0.1,Waning Crescent,46
+Thailand,Nan,Asia/Bangkok,21.2,Fog,3.6,NE,29.86,98,21.2,0,1,310.4,0.7,1.2,0.2,Waxing Crescent,0
+Trinidad and Tobago,Port Of Spain,America/Port_of_Spain,32,Partly cloudy,13,SE,29.83,63,39.8,10,7,277,46.5,8.3,1,Waxing Crescent,14
+Nepal,Kathmandu,Asia/Kathmandu,21,Partly cloudy,3.6,N,29.91,100,21,7,1,934.6,21.5,9,3.2,Waning Crescent,49
+Kuwait,Kuwait City,Asia/Kuwait,26.6,Clear,14.8,SSW,29.92,38,26.4,10,1,607.5,1.5,109.7,11.8,Waning Gibbous,100
+Kenya,Nairobi,Africa/Nairobi,16,Partly cloudy,6.8,NNE,30.18,94,16,10,1,1081.5,44.7,6.7,3.4,Waning Crescent,49
+China,Beijing,Asia/Shanghai,-3,Clear,15.1,N,30.21,54,-7.7,10,1,1028.1,0.7,66.5,69.6,Last Quarter,51
+Belgium,Brussels,Europe/Brussels,13,Clear,11.2,SSE,30.15,77,11.6,10,1,247,69.4,9.4,2.6,Waxing Gibbous,63
+Uzbekistan,Tashkent,Asia/Tashkent,4,Overcast,6.8,NNW,30.27,87,3.6,10,1,373.8,0,49.4,3.6,New Moon,1
+Maldives,Farukolhufunadhoo,Indian/Maldives,27.8,Partly cloudy,12.6,SE,29.85,75,31.1,10,1,360.5,46.5,0,0,Waxing Gibbous,71
+Venezuela,Caracas,America/Caracas,31,Clear,6.8,N,29.77,66,41,10,6,841.1,145.9,57.6,106.8,Waning Crescent,8
+Cameroon,Bafoussam,Africa/Douala,16.1,Patchy rain possible,3.6,WSW,30.03,94,16.1,10,1,727.7,3.5,3.7,0.8,Waning Crescent,28
+Bulgaria,Bogot,Europe/Sofia,19.2,Clear,5.4,SSW,30.13,48,19.2,10,1,263.7,30.8,4.8,0.3,Waning Gibbous,94
+Senegal,Mbabane,Africa/Dakar,36.8,Sunny,16.2,E,29.84,6,35.5,10,9,207,56.5,0.1,0,Waxing Gibbous,97
+Czech Republic,Prague,Europe/Prague,8,Clear,28.1,WSW,29.97,71,4.4,10,1,267,45.4,12.2,3.1,Full Moon,99
+Czech Republic,Prague,Europe/Prague,4,Clear,11.2,ESE,30.09,81,2.2,10,1,620.8,0,55.5,11.6,Full Moon,100
+Malawi,Lilongwe,Africa/Blantyre,24,Clear,6.8,ENE,29.89,59,25.4,10,1,240.3,23.3,0.5,0.2,Waxing Gibbous,93
+Mali,Bamako,Africa/Bamako,25,Clear,6.8,NE,29.88,44,23.8,10,1,303.8,37.6,1.3,1,Waxing Crescent,8
+Zambia,Lusaka,Africa/Lusaka,21.9,Clear,12.6,ENE,29.94,34,21.9,10,1,1081.5,68.7,4.9,5.2,Waxing Crescent,14
+Qatar,Doha,Asia/Qatar,22,Clear,16.9,NNE,29.97,88,24.6,10,1,313.8,62.9,36.7,19.6,Waning Gibbous,77
+Monaco,Monaco,Europe/Monaco,20,Torrential rain shower,19.1,NW,29.71,88,20,10,1,253.7,36.8,8.2,1,Waxing Crescent,31
+Sri Lanka,Colombo,Asia/Colombo,25,Partly cloudy,6.8,S,29.8,94,27.6,10,1,1709,32.9,27.8,9.1,Waning Gibbous,81
+South Korea,Seoul,Asia/Seoul,2,Partly cloudy,6.8,SE,29.94,87,0.2,9,1,1094.8,0,78.1,24.1,Last Quarter,52
+Russia,Chi-Chi-Erh,Asia/Krasnoyarsk,-27.5,Light freezing rain,3.6,NNE,30.74,94,-31.3,10,1,303.8,45.8,3.1,2.3,Last Quarter,51
+Bosnia and Herzegovina,Sarajevo,Europe/Sarajevo,4,Clear,3.6,S,30,100,1.7,7,1,273.7,41.5,11.7,0.9,Waxing Crescent,8
+United States of America,Washington Park,America/Los_Angeles,13.3,Light rain,3.6,N,30.01,69,12.2,16,5,223.6,78.7,1.1,0.5,Waxing Crescent,22
+Greece,Athens,Europe/Athens,22,Partly cloudy,15.1,NNW,30.12,53,24.6,10,1,287.1,35.1,18.5,11.6,Last Quarter,56
+Thailand,Nan,Asia/Bangkok,20.8,Clear,3.6,NE,29.94,72,20.8,10,1,520.7,16.8,5.1,0.9,Waxing Crescent,9
+Palau,Adkip,Pacific/Palau,28.7,Light rain shower,25.6,SW,29.74,80,34.1,10,1,186.9,51.5,0.2,0.1,Waxing Crescent,24
+Burkina Faso,Ouagadougou,Africa/Ouagadougou,27,Partly cloudy,6.8,SSW,29.91,89,29.5,10,1,754.4,12.5,4.5,1.8,Waxing Crescent,8
+Suriname,Paramaribo,America/Paramaribo,28.6,Sunny,15.8,NE,29.81,69,31.8,10,7,280.4,44.4,0,0.1,Waning Crescent,20
+Trinidad and Tobago,Port Of Spain,America/Port_of_Spain,30.5,Patchy rain possible,14.8,E,29.86,63,34.5,10,7,253.7,52.2,3.9,0.7,Waxing Gibbous,86
+United Arab Emirates,Abu Dhabi,Asia/Dubai,20,Clear,11.2,WNW,30.18,49,20,10,1,283.7,134.5,0.7,3.5,Waning Crescent,12
+Guinea,Conakry,Africa/Conakry,32,Sunny,15.1,SW,29.85,63,40.6,10,7,247,48.6,0.1,0.1,Waxing Crescent,26
+Mozambique,Maputo,Africa/Maputo,23.4,Clear,12.6,NNE,29.75,43,24.7,10,1,247,73.7,0.2,0.3,Waning Crescent,22
+Kyrghyzstan,Bishkek,Asia/Bishkek,15.5,Overcast,9.4,WNW,30.01,72,15.5,10,1,210.3,73,1.4,1.1,Full Moon,98
+United States of America,Washington Park,America/Los_Angeles,16.7,Sunny,3.6,S,30.04,50,16.7,16,4,233.7,78.7,1.4,0.2,New Moon,1
+Austria,Vienna,Europe/Vienna,3,Clear,19.1,SE,30.53,75,-0.1,10,1,440.6,33.6,31.2,5.7,Waning Gibbous,84
+Mali,Bamako,Africa/Bamako,25,Partly cloudy,6.1,ENE,29.91,94,27.4,10,1,560.8,14,1.9,1.4,Waxing Crescent,8
+Central African Republic,Bangui,Africa/Bangui,29,Clear,3.6,E,29.85,75,27.7,4,1,260.4,12.9,0.1,0.1,Waxing Gibbous,74
+Uzbekistan,Tashkent,Asia/Tashkent,16,Clear,6.8,NE,30,63,16,10,1,220.3,39,4.5,0.9,Waning Gibbous,100
+Suriname,Paramaribo,America/Paramaribo,29.5,Sunny,16.9,NNE,29.8,61,32.4,10,7,230.3,46.5,0,0.1,Waning Gibbous,86
+Nicaragua,Managua,America/Managua,31,Partly cloudy,6.8,ESE,29.81,55,35.9,10,7,217,64.4,1,2.7,Waxing Gibbous,78
+Guyana,Georgetown,America/Guyana,31,Overcast,19.1,E,29.74,66,36.7,9,7,227,34,4.6,4.2,Waning Gibbous,81
+Guyana,Georgetown,America/Guyana,32,Partly cloudy,15.1,ENE,29.91,52,36.5,10,7,227,42.2,2.4,2.8,Waning Gibbous,95
+Bhutan,Thimphu,Asia/Thimphu,-3.2,Heavy snow,3.6,S,30.18,98,-3.2,2,1,350.5,64.4,1.9,1.6,Waning Gibbous,77
+Sudan,Khartoum,Africa/Khartoum,24.2,Clear,20.9,N,30,11,23.3,10,1,270.4,97.3,2,0.8,Waning Crescent,50
+Algeria,Algiers,Africa/Algiers,19,Clear,28.1,W,29.97,40,19,10,1,227,73,12.9,2.6,Waxing Crescent,17
+Zambia,Lusaka,Africa/Lusaka,21.5,Patchy rain possible,6.8,W,29.89,82,21.5,9,1,2697,4,18.5,8.4,New Moon,1
+Myanmar,Pathein,Asia/Yangon,25.1,Mist,8.3,WNW,29.76,94,28.2,2,1,397.2,5.1,2.6,0.5,First Quarter,41
+Bulgaria,Bogot,Europe/Sofia,14.1,Clear,6.5,SSE,29.81,50,14.1,10,1,250.3,42.2,5.4,0.7,Waxing Crescent,18
+Bulgaria,Sofia,Europe/Sofia,6,Light rain,22,W,29.85,93,4.1,8,1,233.7,79.4,1.2,0.3,Waxing Crescent,2
+Marshall Islands,Majuro,Pacific/Majuro,29,Overcast,19.1,ENE,29.81,79,34.7,24,6,180.2,28.3,0,0.1,Waxing Gibbous,74
+Botswana,Gaborone,Africa/Gaborone,29,Clear,19.1,NNE,29.91,45,28.6,10,1,300.4,32.9,2.7,1,New Moon,0
+Portugal,Lisbon,Europe/Lisbon,19,Clear,16.9,NW,30.09,64,19,10,1,243.7,62.9,5,0.9,Waxing Gibbous,52
+Suriname,Paramaribo,America/Paramaribo,26,Moderate or heavy rain with thunder,24.1,W,29.8,89,27.6,8,6,257,31.5,0,0.1,Waning Crescent,26
+Romania,Bucharest,Europe/Bucharest,3,Clear,6.8,W,29.97,87,0.4,10,1,273.7,66.5,5.5,0.6,Full Moon,99
+Hungary,Budapest,Europe/Budapest,17,Clear,9,E,29.97,72,17,10,1,310.4,0.3,19.2,2.2,Waxing Crescent,22
+Zimbabwe,Harare,Africa/Harare,19,Patchy rain nearby,9.7,E,29.98,67,19,10,1,674.3,35.8,16.3,18.6,Last Quarter,59
+Sri Lanka,Colombo,Asia/Colombo,24,Clear,9,ENE,29.97,83,26,10,1,1041.4,23.6,29.1,4.2,Full Moon,99
+Egypt,Cairo,Africa/Cairo,25,Partly cloudy,15.1,NE,29.94,89,26.5,6,1,253.7,75.8,12.2,14,Waxing Gibbous,81
+Belarus,Minsk,Europe/Minsk,-4,Partly cloudy,6.8,SSW,30.5,86,-8,10,1,287.1,57.2,7.5,2.5,Waxing Gibbous,79
+Luxembourg,Luxembourg,Europe/Luxembourg,1,Light sleet,6.1,SSW,29.62,100,-0.3,5,1,273.7,36.5,13.4,1,Waning Gibbous,97
+United Arab Emirates,Abu Dhabi,Asia/Dubai,33,Partly cloudy,6.1,N,29.62,80,42.9,10,1,267,131.6,0.2,2.9,Waning Gibbous,100
+Cuba,Havana,America/Havana,30,Partly cloudy,24.1,E,29.97,55,34.8,9,7,217,91.6,2.6,6.9,Waxing Gibbous,71
+South Korea,Seoul,Asia/Seoul,-11.4,Partly cloudy,11.2,NW,30.4,61,-19.7,16,1,357.2,40.1,16.3,18.8,Waxing Gibbous,86
+Nicaragua,Managua,America/Managua,35,Partly cloudy,22,ESE,29.7,53,44.4,10,8,270.4,73.7,2.2,7.3,Full Moon,100
+Barbados,Bridgetown,America/Barbados,28,Partly cloudy,25.9,E,29.8,74,30.4,10,7,233.7,47.9,1,1.4,New Moon,0
+Turkey,Yaren,Europe/Istanbul,4,Clear,3.6,N,30.42,87,2.7,10,1,327.1,29.7,16.6,2.8,Waxing Crescent,30
+Monaco,Monaco,Europe/Monaco,13,Clear,11.2,E,30.53,67,13.6,10,1,494,62.9,24.7,6.9,Waning Gibbous,91
+Vietnam,Hanoi,Asia/Bangkok,24,Partly cloudy,9,ESE,29.97,89,26.5,6,1,974.7,0.3,45.9,21.2,Waxing Crescent,5
+Iran,Chi Chi Khvar,Asia/Tehran,4,Clear,8.3,S,30.09,40,1.9,10,1,290.4,73,9.6,1.7,Waning Crescent,8
+Romania,Bucharest,Europe/Bucharest,8,Clear,13,W,29.83,71,5.4,10,1,240.3,75.1,2.4,0.6,Waxing Gibbous,90
+North Korea,Pyongyang,Asia/Pyongyang,9.9,Clear,20.2,NNW,30.06,43,7.2,10,1,247,78.7,2.3,4.2,Waning Gibbous,75
+Tanzania,Dodoma,Africa/Dar_es_Salaam,22,Light rain shower,3.6,N,30,88,24.6,10,1,290.4,15.4,1.3,0.1,Waning Crescent,17
+Romania,Bucharest,Europe/Bucharest,2,Clear,9,W,29.97,64,-1.8,10,1,297.1,60.8,6.6,1,Waxing Crescent,26
+Angola,Luanda,Africa/Luanda,24.9,Partly cloudy,9,WSW,29.85,71,26.5,10,1,474,45.1,8.9,3.5,Waning Gibbous,61
+Djibouti,Djibouti,Africa/Djibouti,30.2,Clear,3.6,NW,29.68,69,35.1,10,1,260.4,60.1,1.2,1.4,Waning Crescent,39
+Mexico,Mexico City,America/Mexico_City,17,Light rain,15.1,SE,30.26,83,17,11,5,787.7,75.1,31.9,49.1,Waxing Gibbous,81
+Myanmar,Bago,Asia/Yangon,20.7,Clear,7.2,NNW,29.88,59,20.7,10,1,807.8,4.4,10.6,0.9,Waxing Crescent,9
+Thailand,Nan,Asia/Bangkok,21.7,Clear,3.6,SE,29.96,70,21.7,10,1,433.9,48.6,2.2,0.4,Waxing Gibbous,53
+Mozambique,Maputo,Africa/Maputo,27,Partly cloudy,20.2,ESE,29.85,79,30.3,10,1,480.7,20.9,3.8,2.4,Waning Crescent,30
+Solomon Islands,Honiara,Pacific/Guadalcanal,28,Partly cloudy,3.6,ESE,29.88,84,31.8,9,6,195.3,44,0.5,0.4,Waning Crescent,49
+Niger,Niamey,Africa/Niamey,26,Overcast,11.2,NE,29.97,16,24.5,3.5,1,403.9,68.7,2.8,1.5,New Moon,1
+Equatorial Guinea,Malabo,Africa/Malabo,27.4,Clear,19.8,SW,29.86,79,30.8,10,1,417.2,52.2,0.1,0.2,Waxing Gibbous,59
+Cape Verde,Praia,Atlantic/Cape_Verde,26,Clear,24.1,NNE,29.91,42,27.7,10,6,196.9,62.9,0.8,0.3,Waning Crescent,17
+Sierra Leone,Freetown,Africa/Freetown,26.3,Patchy rain possible,10.1,WSW,29.9,87,29.8,9,1,370.5,29,1.5,0.5,Waning Gibbous,65
+Tanzania,Dodoma,Africa/Dar_es_Salaam,25,Clear,16.9,E,30,47,25.3,10,1,233.7,42.9,0.2,0.1,First Quarter,48
+Switzerland,Bern,Europe/Zurich,1,Partly cloudy,3.6,E,30.09,93,0.3,10,1,627.5,0,50,17.9,Waning Crescent,43
+Australia,Canberra,Australia/Sydney,9,Overcast,13,N,30.24,81,8.5,10,4,230.3,19.5,5,1.6,Waning Gibbous,65
+Qatar,Doha,Asia/Qatar,35,Clear,19.1,NW,29.53,56,45.4,10,1,253.7,80.8,22.3,14.4,New Moon,1

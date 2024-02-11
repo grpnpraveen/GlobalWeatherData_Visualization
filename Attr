@@ -1,29 +1,30 @@
-Buzz Songs in 2023 
-
-track_name (main)
-artist(s)_name (main)
+Weather 
 
 
 
-Categorical:
 
-released_year ->Year 
-released_month -> Month
-Key -> Key
-artist_count (how many artists)
+
+Categorical 
+country
+location_name
+timezone
+condition_text
+wind_direction
+moon_phase
+
 
 
 Numerical: 
 
-in_spotify_playlists -> spotify pl
-streams -> how many streams 
-in_apple_playlists -> apple pl
-in_deezer_playlists -> deezer pl
-bpm ->  Beats
-danceability_%
-valence_%
-energy_%
-acousticness_%
-instrumentalness_%
-liveness_%
-speechiness_%
+moon_illumination
+temperature_celsius
+wind_kph
+pressure_in
+humidity
+feels_like_celsius
+visibility_km
+uv_index
+air_quality_Carbon_Monoxide
+air_quality_Ozone
+air_quality_Nitrogen_dioxide
+air_quality_Sulphur_dioxide
