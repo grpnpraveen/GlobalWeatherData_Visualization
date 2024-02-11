@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="nav-max">
+        <header>
+          <img src="./icon.jpg" style="width: 50px;border-radius: 8px;" alt="">
+          <h1>Buzz Songs</h1><span>2023</span>
+        </header>
+        <button id="toggle-nav-btn" class="circle"></button>
+        <br>
+        <hr>
+        <ul class="menu">
+          <li>
+            <a class="nav-link" href="#">
+                <img src="./cat.png" style="width: 45px;border-radius: 8px;" alt="">
+                <span>
+                    Categorical 
+                </span>
+            </a>
+            <div id="categorical" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#7da6ff;">Fun</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+                <img src="./hist.png" style="width: 45px;border-radius: 8px;" alt="">
+              <span>Numerical</span>
+            </a>  
+            <div id="categorical" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">Fun</div>
+          </li>
+          <li>
+            <li>
+                <a class="nav-link" href="#">
+                    <img src="./direc.png" style="width: 45px;border-radius: 8px;" alt="">
+                  <span>Direction</span>
+                  <div class="check-box">
+                    <input type="checkbox" checked>
+                </div>
+                </a>  
+               
+            </li>
+        </ul>
+      </nav>
+
+
+
+    <!-- Data visualization -->
+    <div class="main" style="margin-left: 350px;padding-top:150px;padding-left:200px;">
+
+      <div id="visualization"></div>
+
+    </div>
+
+
+</body>
+<script>
+const navBar = document.querySelector("nav")
+const toggleNavBtn = document.querySelector("#toggle-nav-btn")
+
+toggleNavBtn.addEventListener("click", (event) => {
+  toggleNav()
+})
+
+function toggleNav() {
+  if (navBar.classList.contains("nav-min")){
+    openNav()
+  } else {
+    closeNav()
+  }
+}
+
+function openNav() {
+  navBar.classList.remove("nav-min") 
+  navBar.classList.add("nav-max") 
+}
+
+function closeNav() {
+  navBar.classList.remove("nav-max") 
+  navBar.classList.add("nav-min")
+}
+
+
+// Medias
+const phone = window.matchMedia("(width <= 480px)")
+function media(e) {
+  if (e.matches) {
+    closeNav()
+  } else {
+    openNav()
+  }
+}
+phone.addListener(media)
+
+
+
+
+
+
+
+// DATA Visualization
+var data;
+
+// Load the CSV file
+d3.csv("spotify-2023.csv").then(function(csvData) {
+    // Save the data globally
+    data = csvData;
+    // Create initial visualization upon page load
+    createVisualization();
+}).catch(function(error) {
+    // Handle any errors that occur during loading
+    console.error("Error loading the CSV file:", error);
+});
+
+// Function to create a histogram
+function createHistogram(attribute) {
+    // Clear previous visualization
+    document.getElementById("visualization").innerHTML = "";
+
+    // Extract numerical values for the selected attribute
+    var values = data.map(function(d) { return Number(d[attribute]); });
+
+    // Set up dimensions for the histogram
+    var width = 600;
+    var height = 400;
+    var margin = { top: 20, right: 30, bottom: 30, left: 40 };
+
+    // Create SVG element
+    var svg = d3.select("#visualization")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+    // Create scales for x and y axes
+    var x = d3.scaleLinear()
+              .domain(d3.extent(values))
+              .range([margin.left, width - margin.right]);
+
+    var bins = d3.histogram()
+                 .domain(x.domain())
+                 .thresholds(x.ticks(20))
+                 (values);
+
+    var y = d3.scaleLinear()
+              .domain([0, d3.max(bins, function(d) { return d.length; })])
+              .nice()
+              .range([height - margin.bottom, margin.top]);
+
+    // Create bars for the histogram
+    svg.append("g")
+       .attr("fill", "steelblue")
+       .selectAll("rect")
+       .data(bins)
+       .join("rect")
+       .attr("x", function(d) { return x(d.x0) + 1; })
+       .attr("width", function(d) { return Math.max(0, x(d.x1) - x(d.x0) - 1); })
+       .attr("y", function(d) { return y(d.length); })
+       .attr("height", function(d) { return y(0) - y(d.length); });
+
+    // Create x-axis
+    svg.append("g")
+       .attr("transform", "translate(0," + (height - margin.bottom) + ")")
+       .call(d3.axisBottom(x));
+
+    // Create y-axis
+    svg.append("g")
+       .attr("transform", "translate(" + margin.left + ",0)")
+       .call(d3.axisLeft(y));
+}
+
+// Function to create a bar graph
+function createBarGraph(attribute) {
+    // Clear previous visualization
+    document.getElementById("visualization").innerHTML = "";
+
+    // Extract categorical values for the selected attribute
+    var values = data.map(function(d) { return d[attribute]; });
+
+    // Count occurrences of each category
+    var counts = {};
+    values.forEach(function(value) {
+        counts[value] = (counts[value] || 0) + 1;
+    });
+
+    // Set up dimensions for the bar graph
+    var width = 600;
+    var height = 400;
+
+    // Create SVG element
+    var svg = d3.select("#visualization")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+    // Set up scales for x and y axes
+    var x = d3.scaleBand()
+              .domain(Object.keys(counts))
+              .range([0, width])
+              .padding(0.1);
+
+    var y = d3.scaleLinear()
+              .domain([0, d3.max(Object.values(counts))])
+              .range([height, 0]);
+
+    // Create bars for the bar graph
+    svg.selectAll("rect")
+       .data(Object.entries(counts))
+       .enter()
+       .append("rect")
+       .attr("x", function(d) { return x(d[0]); })
+       .attr("y", function(d) { return y(d[1]); })
+       .attr("width", x.bandwidth())
+       .attr("height", function(d) { return height - y(d[1]); })
+       .attr("fill", "steelblue");
+
+    // Create x-axis
+    svg.append("g")
+       .attr("transform", "translate(0," + height + ")")
+       .call(d3.axisBottom(x));
+
+    // Create y-axis
+    svg.append("g")
+       .call(d3.axisLeft(y));
+}
+
+// Function to create visualization based on user's selection
+function createVisualization() {
+    //var selectedDataType ="categorical";
+    //var selectedAttribute = "Key";
+    var selectedDataType ="numerical";
+    var selectedAttribute = "streams";
+
+    if (selectedDataType === "numerical") {
+        createHistogram("streams");
+    } else if (selectedDataType === "categorical") {
+        createBarGraph(selectedAttribute);
+    }
+}
+
+createVisualization()
+</script>
+</html>
