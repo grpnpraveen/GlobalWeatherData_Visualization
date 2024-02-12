@@ -1,14 +1,13 @@
 Weather 
 
-
+#country
+#location_name
+#timezone
 
 
 
 Categorical: 
 
-country
-location_name
-timezone
 condition_text
 wind_direction
 moon_phase
