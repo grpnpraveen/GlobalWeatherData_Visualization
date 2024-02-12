@@ -24,14 +24,29 @@
                     Categorical 
                 </span>
             </a>
-            <div id="categorical" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#7da6ff;">Fun</div>
+            <div onclick="show_cat(1)" id="cat1" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#7da6ff;">
+              <input type="radio" id="condition_text" name="color" value="Number 3" checked>
+              <label>Condition</label>
+            </div>
+            <div onclick="show_cat(2)" id="cat2" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+              <input type="radio" id="wind_direction" name="color" value="Number 3">
+              <label>Wind Direction</label>
+            </div>
+            <div onclick="show_cat(3)" id="cat3" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+              <input type="radio" id="moon_phase" name="color" value="Number 3">
+              <label >Moon Phase</label>
+            </div>
+            </div>
           </li>
           <li>
             <a class="nav-link" href="#">
                 <img src="./hist.png" style="width: 45px;border-radius: 8px;" alt="">
               <span>Numerical</span>
             </a>  
-            <div id="categorical" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">Fun</div>
+            <div id="categorical" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+              <input type="radio" id="temperature_celsius" name="color" value="Number 3">
+              <label>Condition</label>
+            </div>
           </li>
           <li>
             <li>
@@ -39,7 +54,7 @@
                     <img src="./direc.png" style="width: 45px;border-radius: 8px;" alt="">
                   <span>Direction</span>
                   <div class="check-box">
-                    <input type="checkbox" checked>
+                    <input id="direction" type="checkbox">
                 </div>
                 </a>  
                
@@ -105,18 +120,15 @@ d3.csv("data.csv").then(function(csvData) {
     // Save the data globally
     data = csvData;
     //Create initial visualization upon page load
-
-    //createVisualization("country");
-    //createVisualization("condition_text");
+    createVisualization("condition_text");
     //createVisualization("wind_direction");
-    createVisualization("moon_phase");
+    //createVisualization("moon_phase");
 }).catch(function(error) {
     // Handle any errors that occur during loading
     console.error("Error loading the CSV file:", error);
 });
 
 var data_info = {
-  "country": {"type": "categorical", "heading":"Country","x_title":"Countries","y_title":"Frequency"},
   "condition_text": {"type": "categorical", "heading":"Weather Condition","x_title":"Condition","y_title":"Frequency"},
   "wind_direction": {"type": "categorical", "heading":"Wind direction","x_title":"Directions","y_title":"Frequency"},
   "moon_phase": {"type": "categorical", "heading":"Moon phases","x_title":"Phase","y_title":"Frequency"},
@@ -145,7 +157,7 @@ var get_unique = (data,attribute) => {
 
 function get_graph_data(attribute)
 {
-  if(attribute=="country" || attribute=="condition_text" || attribute=="wind_direction" ||  attribute=="moon_phase")
+  if(attribute=="country" || attribute=="condition_text" || attribute=="wind_direction" ||  attribute=="moon_phase" || attribute=="location_name")
   {
     var graph_data =[];
     var unique_countries = get_unique(data,attribute);
@@ -181,7 +193,11 @@ function createVisualization(selectedAttribute) {
         createBarGraph(selectedAttribute);
     }
 }
+
+
 </script>
 <script src = "bargraph.js"></script>
+<script src = "bargraph_hor.js"></script>
 <script src = "histogram.js"></script>
+<script src = "index.js"></script>
 </html>

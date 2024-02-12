@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Bar Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <svg id="bar-chart"></svg>
+
+    <script>
+        // Define or generate your dataset
+        const dataset = [
+        {
+            "index": 0,
+            "attribute": 2023
+        },
+        {
+            "index": 1,
+            "attribute": 2023
+        },
+        {
+            "index": 2,
+            "attribute": 2023
+        },
+        {
+            "index": 3,
+            "attribute": 2019
+        },
+        {
+            "index": 4,
+            "attribute": 2023
+        },
+        {
+            "index": 5,
+            "attribute": 2023
+        },
+        {
+            "index": 6,
+            "attribute": 2023
+        },
+        {
+            "index": 7,
+            "attribute": 2023
+        },
+        {
+            "index": 8,
+            "attribute": 2023
+        },
+        {
+            "index": 9,
+            "attribute": 2023
+        },
+        {
+            "index": 10,
+            "attribute": 2023
+        },
+        {
+            "index": 11,
+            "attribute": 2023
+        },
+        {
+            "index": 12,
+            "attribute": 2023
+        },
+        {
+            "index": 13,
+            "attribute": 2023
+        },
+        {
+            "index": 14,
+            "attribute": 2022
+        },
+        {
+            "index": 15,
+            "attribute": 2022
+        },
+        {
+            "index": 16,
+            "attribute": 2023
+        },
+        {
+            "index": 17,
+            "attribute": 2023
+        },
+        {
+            "index": 18,
+            "attribute": 2023
+        },
+        {
+            "index": 19,
+            "attribute": 2023
+        },
+        {
+            "index": 20,
+            "attribute": 2023
+        },
+        {
+            "index": 21,
+            "attribute": 2013
+        },
+        {
+            "index": 22,
+            "attribute": 2023
+        },
+        {
+            "index": 23,
+            "attribute": 2023
+        },
+        {
+            "index": 24,
+            "attribute": 2023
+        },
+        {
+            "index": 25,
+            "attribute": 2023
+        },
+        {
+            "index": 26,
+            "attribute": 2023
+        },
+        {
+            "index": 27,
+            "attribute": 2023
+        },
+        {
+            "index": 28,
+            "attribute": 2023
+        },
+        {
+            "index": 29,
+            "attribute": 2022
+        },
+        {
+            "index": 30,
+            "attribute": 2022
+        },
+        {
+            "index": 31,
+            "attribute": 2023
+        },
+        {
+            "index": 32,
+            "attribute": 2023
+        },
+        {
+            "index": 33,
+            "attribute": 2014
+        },
+        {
+            "index": 34,
+            "attribute": 2014
+        },
+        {
+            "index": 35,
+            "attribute": 2023
+        },
+        {
+            "index": 36,
+            "attribute": 2023
+        },
+        {
+            "index": 37,
+            "attribute": 2018
+        },
+        {
+            "index": 38,
+            "attribute": 2022
+        },
+        {
+            "index": 39,
+            "attribute": 2017
+        },
+        {
+            "index": 40,
+            "attribute": 2023
+        },
+        {
+            "index": 41,
+            "attribute": 2020
+        },
+        {
+            "index": 42,
+            "attribute": 2022
+        },
+        {
+            "index": 43,
+            "attribute": 2016
+        },
+        {
+            "index": 44,
+            "attribute": 2016
+        },
+        {
+            "index": 45,
+            "attribute": 2023
+        },
+        {
+            "index": 46,
+            "attribute": 2023
+        },
+        {
+            "index": 47,
+            "attribute": 2023
+        },
+        {
+            "index": 48,
+            "attribute": 2023
+        },
+        {
+            "index": 49,
+            "attribute": 2023
+        },
+        {
+            "index": 50,
+            "attribute": 2012
+        },
+        {
+            "index": 51,
+            "attribute": 2019
+        },
+        {
+            "index": 52,
+            "attribute": 2023
+        },
+        {
+            "index": 53,
+            "attribute": 2022
+        },
+        {
+            "index": 54,
+            "attribute": 2023
+        },
+        {
+            "index": 55,
+            "attribute": 2020
+        },
+        {
+            "index": 56,
+            "attribute": 2023
+        },
+        {
+            "index": 57,
+            "attribute": 2022
+        },
+        {
+            "index": 58,
+            "attribute": 2022
+        },
+        {
+            "index": 59,
+            "attribute": 1999
+        },
+        {
+            "index": 60,
+            "attribute": 2022
+        },
+        {
+            "index": 61,
+            "attribute": 2022
+        },
+        {
+            "index": 62,
+            "attribute": 2023
+        },
+        {
+            "index": 63,
+            "attribute": 2023
+        },
+        {
+            "index": 64,
+            "attribute": 2023
+        },
+        {
+            "index": 65,
+            "attribute": 2020
+        },
+        {
+            "index": 66,
+            "attribute": 2022
+        },
+        {
+            "index": 67,
+            "attribute": 2012
+        },
+        {
+            "index": 68,
+            "attribute": 2022
+        },
+        {
+            "index": 69,
+            "attribute": 2008
+        },
+        {
+            "index": 70,
+            "attribute": 2022
+        },
+        {
+            "index": 71,
+            "attribute": 2022
+        },
+        {
+            "index": 72,
+            "attribute": 2022
+        },
+        {
+            "index": 73,
+            "attribute": 1975
+        },
+        {
+            "index": 74,
+            "attribute": 2022
+        },
+        {
+            "index": 75,
+            "attribute": 2023
+        },
+        {
+            "index": 76,
+            "attribute": 2021
+        },
+        {
+            "index": 77,
+            "attribute": 2023
+        },
+        {
+            "index": 78,
+            "attribute": 2018
+        },
+        {
+            "index": 79,
+            "attribute": 2022
+        },
+        {
+            "index": 80,
+            "attribute": 2015
+        },
+        {
+            "index": 81,
+            "attribute": 2012
+        },
+        {
+            "index": 82,
+            "attribute": 2023
+        },
+        {
+            "index": 83,
+            "attribute": 2023
+        },
+        {
+            "index": 84,
+            "attribute": 2023
+        },
+        {
+            "index": 85,
+            "attribute": 2020
+        },
+        {
+            "index": 86,
+            "attribute": 2023
+        },
+        {
+            "index": 87,
+            "attribute": 2023
+        },
+        {
+            "index": 88,
+            "attribute": 2022
+        },
+        {
+            "index": 89,
+            "attribute": 2011
+        },
+        {
+            "index": 90,
+            "attribute": 2023
+        },
+        {
+            "index": 91,
+            "attribute": 2012
+        },
+        {
+            "index": 92,
+            "attribute": 2022
+        },
+        {
+            "index": 93,
+            "attribute": 2004
+        },
+        {
+            "index": 94,
+            "attribute": 2023
+        },
+        {
+            "index": 95,
+            "attribute": 2022
+        },
+        {
+            "index": 96,
+            "attribute": 2021
+        },
+        {
+            "index": 97,
+            "attribute": 2011
+        },
+        {
+            "index": 98,
+            "attribute": 2012
+        },
+        {
+            "index": 99,
+            "attribute": 2022
+        },
+        {
+            "index": 100,
+            "attribute": 2023
+        },
+        {
+            "index": 101,
+            "attribute": 1985
+        },
+        {
+            "index": 102,
+            "attribute": 2014
+        },
+        {
+            "index": 103,
+            "attribute": 2023
+        },
+        {
+            "index": 104,
+            "attribute": 2023
+        },
+        {
+            "index": 105,
+            "attribute": 2020
+        },
+        {
+            "index": 106,
+            "attribute": 2023
+        },
+        {
+            "index": 107,
+            "attribute": 2023
+        },
+        {
+            "index": 108,
+            "attribute": 2022
+        },
+        {
+            "index": 109,
+            "attribute": 2022
+        },
+        {
+            "index": 110,
+            "attribute": 2021
+        },
+        {
+            "index": 111,
+            "attribute": 2011
+        },
+        {
+            "index": 112,
+            "attribute": 2019
+        },
+        {
+            "index": 113,
+            "attribute": 2017
+        },
+        {
+            "index": 114,
+            "attribute": 2023
+        },
+        {
+            "index": 115,
+            "attribute": 2023
+        },
+        {
+            "index": 116,
+            "attribute": 2023
+        },
+        {
+            "index": 117,
+            "attribute": 2011
+        },
+        {
+            "index": 118,
+            "attribute": 2023
+        },
+        {
+            "index": 119,
+            "attribute": 2007
+        },
+        {
+            "index": 120,
+            "attribute": 2022
+        },
+        {
+            "index": 121,
+            "attribute": 2017
+        },
+        {
+            "index": 122,
+            "attribute": 2022
+        },
+        {
+            "index": 123,
+            "attribute": 2017
+        },
+        {
+            "index": 124,
+            "attribute": 2023
+        },
+        {
+            "index": 125,
+            "attribute": 2002
+        },
+        {
+            "index": 126,
+            "attribute": 2023
+        },
+        {
+            "index": 127,
+            "attribute": 2016
+        },
+        {
+            "index": 128,
+            "attribute": 2004
+        },
+        {
+            "index": 129,
+            "attribute": 2019
+        },
+        {
+            "index": 130,
+            "attribute": 2023
+        },
+        {
+            "index": 131,
+            "attribute": 2023
+        },
+        {
+            "index": 132,
+            "attribute": 2023
+        },
+        {
+            "index": 133,
+            "attribute": 2010
+        },
+        {
+            "index": 134,
+            "attribute": 2023
+        },
+        {
+            "index": 135,
+            "attribute": 2012
+        },
+        {
+            "index": 136,
+            "attribute": 2023
+        },
+        {
+            "index": 137,
+            "attribute": 2022
+        },
+        {
+            "index": 138,
+            "attribute": 2013
+        },
+        {
+            "index": 139,
+            "attribute": 2021
+        },
+        {
+            "index": 140,
+            "attribute": 2019
+        },
+        {
+            "index": 141,
+            "attribute": 2023
+        },
+        {
+            "index": 142,
+            "attribute": 2004
+        },
+        {
+            "index": 143,
+            "attribute": 2016
+        },
+        {
+            "index": 144,
+            "attribute": 2010
+        },
+        {
+            "index": 145,
+            "attribute": 2020
+        },
+        {
+            "index": 146,
+            "attribute": 2010
+        },
+        {
+            "index": 147,
+            "attribute": 1983
+        },
+        {
+            "index": 148,
+            "attribute": 2015
+        },
+        {
+            "index": 149,
+            "attribute": 2011
+        },
+        {
+            "index": 150,
+            "attribute": 2012
+        },
+        {
+            "index": 151,
+            "attribute": 2018
+        },
+        {
+            "index": 152,
+            "attribute": 2023
+        },
+        {
+            "index": 153,
+            "attribute": 2013
+        },
+        {
+            "index": 154,
+            "attribute": 2012
+        },
+        {
+            "index": 155,
+            "attribute": 2016
+        },
+        {
+            "index": 156,
+            "attribute": 2014
+        },
+        {
+            "index": 157,
+            "attribute": 2013
+        },
+        {
+            "index": 158,
+            "attribute": 2022
+        },
+        {
+            "index": 159,
+            "attribute": 2017
+        },
+        {
+            "index": 160,
+            "attribute": 2014
+        },
+        {
+            "index": 161,
+            "attribute": 2023
+        },
+        {
+            "index": 162,
+            "attribute": 1992
+        },
+        {
+            "index": 163,
+            "attribute": 2019
+        },
+        {
+            "index": 164,
+            "attribute": 2017
+        },
+        {
+            "index": 165,
+            "attribute": 2023
+        },
+        {
+            "index": 166,
+            "attribute": 2016
+        },
+        {
+            "index": 167,
+            "attribute": 2019
+        },
+        {
+            "index": 168,
+            "attribute": 2010
+        },
+        {
+            "index": 169,
+            "attribute": 2013
+        },
+        {
+            "index": 170,
+            "attribute": 2022
+        },
+        {
+            "index": 171,
+            "attribute": 2023
+        },
+        {
+            "index": 172,
+            "attribute": 2020
+        },
+        {
+            "index": 173,
+            "attribute": 2010
+        },
+        {
+            "index": 174,
+            "attribute": 2023
+        },
+        {
+            "index": 175,
+            "attribute": 2022
+        },
+        {
+            "index": 176,
+            "attribute": 1984
+        },
+        {
+            "index": 177,
+            "attribute": 2023
+        },
+        {
+            "index": 178,
+            "attribute": 2022
+        },
+        {
+            "index": 179,
+            "attribute": 2023
+        },
+        {
+            "index": 180,
+            "attribute": 2023
+        },
+        {
+            "index": 181,
+            "attribute": 2023
+        },
+        {
+            "index": 182,
+            "attribute": 2023
+        },
+        {
+            "index": 183,
+            "attribute": 2023
+        },
+        {
+            "index": 184,
+            "attribute": 2023
+        },
+        {
+            "index": 185,
+            "attribute": 2022
+        },
+        {
+            "index": 186,
+            "attribute": 2023
+        },
+        {
+            "index": 187,
+            "attribute": 2023
+        },
+        {
+            "index": 188,
+            "attribute": 2022
+        },
+        {
+            "index": 189,
+            "attribute": 2022
+        },
+        {
+            "index": 190,
+            "attribute": 2023
+        },
+        {
+            "index": 191,
+            "attribute": 2022
+        },
+        {
+            "index": 192,
+            "attribute": 2023
+        },
+        {
+            "index": 193,
+            "attribute": 2022
+        },
+        {
+            "index": 194,
+            "attribute": 2022
+        },
+        {
+            "index": 195,
+            "attribute": 2023
+        },
+        {
+            "index": 196,
+            "attribute": 2022
+        },
+        {
+            "index": 197,
+            "attribute": 2023
+        },
+        {
+            "index": 198,
+            "attribute": 2023
+        }
+    ];
+
+        // Set up SVG dimensions
+        const svgWidth = 800;
+        const svgHeight = 400;
+        const margin = { top: 20, bottom: 50, right: 20, left: 80 };
+        const width = svgWidth - margin.left - margin.right;
+        const height = svgHeight - margin.top - margin.bottom;
+
+        // Create SVG container
+        const svg = d3.select("#bar-chart")
+            .attr("width", svgWidth)
+            .attr("height", svgHeight);
+
+        // Define scales
+        const xScale = d3.scaleBand()
+            .domain(dataset.map(d => d.index))
+            .range([margin.left, width + margin.left])
+            .padding(0.1);
+
+        const yScale = d3.scaleLinear()
+            .domain([0, d3.max(dataset, d => d.attribute)])
+            .nice()
+            .range([height + margin.top, margin.top]);
+
+        // Create axes
+        const xAxis = d3.axisBottom(xScale);
+        const yAxis = d3.axisLeft(yScale);
+
+        // Append bars to SVG
+        svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr("x", d => xScale(d.index))
+            .attr("y", d => yScale(d.attribute))
+            .attr("width", xScale.bandwidth())
+            .attr("height", d => height + margin.top - yScale(d.attribute))
+            .attr("fill", "steelblue");
+
+        // Append axes to SVG
+        svg.append("g")
+            .attr("transform", `translate(0,${height + margin.top})`)
+            .call(xAxis);
+
+        svg.append("g")
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(yAxis);
+    </script>
+</body>
+</html>

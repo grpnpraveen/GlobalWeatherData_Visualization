@@ -1,3 +1,5 @@
+
+
 // Function to create a bar graph
 function createBarGraph(attribute) {
     // Clear previous visualization
@@ -62,7 +64,7 @@ function createBarGraph(attribute) {
       .call(YAxis)
       .selectAll("text")
       .style("fill", "white"); // Set text color to white
-
+  
     // Y label 
     svgBar.append("text")
       .attr("class", "y-axis-label")
@@ -107,4 +109,4 @@ function createBarGraph(attribute) {
     
     
     
-}
+  }

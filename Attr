@@ -17,15 +17,15 @@ moon_phase
 
 Numerical: 
 
-moon_illumination
 temperature_celsius
+humidity
+uv_index
 wind_kph
 pressure_in
-humidity
-feels_like_celsius
 visibility_km
-uv_index
 air_quality_Carbon_Monoxide
 air_quality_Ozone
 air_quality_Nitrogen_dioxide
 air_quality_Sulphur_dioxide
+moon_illumination
+feels_like_celsius
