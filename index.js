@@ -194,7 +194,7 @@ function show_cat(data_num)
     cat15.style.background="#36393f";
     break;
     case 7:
-    rad5.checked=true;
+    rad7.checked=true;
     if(is_direction)
     {
       createHorizontalHistogram("uv_index");

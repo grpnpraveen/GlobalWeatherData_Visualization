@@ -64,7 +64,8 @@ function createHistogram(attribute) {
       .attr("x", function(d) { return x(d.x0) + (x(d.x1) - x(d.x0)) / 2; }) // Position at the center of each bar
       .attr("y", function(d) { return d.length >= 0 ? y(d.length) - 5 : y(0) + 15; }) // Adjusted y position for negative values
       .text(function(d) { return d.length; })
-      .attr("fill", "grey");
+      .attr("fill", "grey")
+       .style("font-size", "12px");
 
    // Create x-axis
    svg.append("g")
