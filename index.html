@@ -50,7 +50,7 @@
 
 
     <!-- Data visualization -->
-    <div class="main" style="margin-left: 350px;padding-top:150px;padding-left:200px;">
+    <div class="main" style="margin-left: 180px;padding-top:30px;padding-left:200px;">
 
       <div id="visualization"></div>
 
@@ -97,150 +97,91 @@ function media(e) {
 phone.addListener(media)
 
 
-
-
-
-
-
 // DATA Visualization
 var data;
-
-// Load the CSV file
-d3.csv("spotify-2023.csv").then(function(csvData) {
+var graph_heigth=100;
+// Load the CSV file  
+d3.csv("data.csv").then(function(csvData) {
     // Save the data globally
     data = csvData;
-    // Create initial visualization upon page load
-    createVisualization();
+    //Create initial visualization upon page load
+
+    //createVisualization("country");
+    //createVisualization("condition_text");
+    //createVisualization("wind_direction");
+    createVisualization("moon_phase");
 }).catch(function(error) {
     // Handle any errors that occur during loading
     console.error("Error loading the CSV file:", error);
 });
 
-// Function to create a histogram
-function createHistogram(attribute) {
-    // Clear previous visualization
-    document.getElementById("visualization").innerHTML = "";
+var data_info = {
+  "country": {"type": "categorical", "heading":"Country","x_title":"Countries","y_title":"Frequency"},
+  "condition_text": {"type": "categorical", "heading":"Weather Condition","x_title":"Condition","y_title":"Frequency"},
+  "wind_direction": {"type": "categorical", "heading":"Wind direction","x_title":"Directions","y_title":"Frequency"},
+  "moon_phase": {"type": "categorical", "heading":"Moon phases","x_title":"Phase","y_title":"Frequency"},
 
-    // Extract numerical values for the selected attribute
-    var values = data.map(function(d) { return Number(d[attribute]); });
+  "in_spotify_playlists": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "streams": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "in_apple_playlists": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "in_deezer_playlists": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "bpm": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "danceability_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "valence_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "energy_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "acousticness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "instrumentalness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "liveness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
+  "speechiness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""}
+};
 
-    // Set up dimensions for the histogram
-    var width = 600;
-    var height = 400;
-    var margin = { top: 20, right: 30, bottom: 30, left: 40 };
 
-    // Create SVG element
-    var svg = d3.select("#visualization")
-                .append("svg")
-                .attr("width", width)
-                .attr("height", height);
+var get_unique = (data,attribute) => {
+  let unique_values = [
+      ...new Set(data.map((element) => element[attribute])),
+  ];
+  return unique_values;
+};
 
-    // Create scales for x and y axes
-    var x = d3.scaleLinear()
-              .domain(d3.extent(values))
-              .range([margin.left, width - margin.right]);
+function get_graph_data(attribute)
+{
+  if(attribute=="country" || attribute=="condition_text" || attribute=="wind_direction" ||  attribute=="moon_phase")
+  {
+    var graph_data =[];
+    var unique_countries = get_unique(data,attribute);
 
-    var bins = d3.histogram()
-                 .domain(x.domain())
-                 .thresholds(x.ticks(20))
-                 (values);
+    console.log(unique_countries);
+    for (let i = 0; i < unique_countries.length; i++) {
+      var temp ={};
+      temp[unique_countries[i]]=0;
 
-    var y = d3.scaleLinear()
-              .domain([0, d3.max(bins, function(d) { return d.length; })])
-              .nice()
-              .range([height - margin.bottom, margin.top]);
-
-    // Create bars for the histogram
-    svg.append("g")
-       .attr("fill", "steelblue")
-       .selectAll("rect")
-       .data(bins)
-       .join("rect")
-       .attr("x", function(d) { return x(d.x0) + 1; })
-       .attr("width", function(d) { return Math.max(0, x(d.x1) - x(d.x0) - 1); })
-       .attr("y", function(d) { return y(d.length); })
-       .attr("height", function(d) { return y(0) - y(d.length); });
-
-    // Create x-axis
-    svg.append("g")
-       .attr("transform", "translate(0," + (height - margin.bottom) + ")")
-       .call(d3.axisBottom(x));
-
-    // Create y-axis
-    svg.append("g")
-       .attr("transform", "translate(" + margin.left + ",0)")
-       .call(d3.axisLeft(y));
-}
-
-// Function to create a bar graph
-function createBarGraph(attribute) {
-    // Clear previous visualization
-    document.getElementById("visualization").innerHTML = "";
-
-    // Extract categorical values for the selected attribute
-    var values = data.map(function(d) { return d[attribute]; });
-
-    // Count occurrences of each category
-    var counts = {};
-    values.forEach(function(value) {
-        counts[value] = (counts[value] || 0) + 1;
-    });
-
-    // Set up dimensions for the bar graph
-    var width = 600;
-    var height = 400;
-
-    // Create SVG element
-    var svg = d3.select("#visualization")
-                .append("svg")
-                .attr("width", width)
-                .attr("height", height);
-
-    // Set up scales for x and y axes
-    var x = d3.scaleBand()
-              .domain(Object.keys(counts))
-              .range([0, width])
-              .padding(0.1);
-
-    var y = d3.scaleLinear()
-              .domain([0, d3.max(Object.values(counts))])
-              .range([height, 0]);
-
-    // Create bars for the bar graph
-    svg.selectAll("rect")
-       .data(Object.entries(counts))
-       .enter()
-       .append("rect")
-       .attr("x", function(d) { return x(d[0]); })
-       .attr("y", function(d) { return y(d[1]); })
-       .attr("width", x.bandwidth())
-       .attr("height", function(d) { return height - y(d[1]); })
-       .attr("fill", "steelblue");
-
-    // Create x-axis
-    svg.append("g")
-       .attr("transform", "translate(0," + height + ")")
-       .call(d3.axisBottom(x));
-
-    // Create y-axis
-    svg.append("g")
-       .call(d3.axisLeft(y));
+      for (let j = 0; j < data.length; j++) {
+        if( data[j][attribute]==unique_countries[i])
+        {
+          temp[unique_countries[i]]=temp[unique_countries[i]]+1;
+        }
+      }
+      graph_data.push({"x_values":unique_countries[i],"y_values":temp[unique_countries[i]]});
+    }
+    return graph_data;
+  }
 }
 
 // Function to create visualization based on user's selection
-function createVisualization() {
+function createVisualization(selectedAttribute) {
     //var selectedDataType ="categorical";
     //var selectedAttribute = "Key";
-    var selectedDataType ="numerical";
-    var selectedAttribute = "streams";
+    console.log(data_info[selectedAttribute]["type"])
+    var selectedDataType = data_info[selectedAttribute]["type"];
+    var selectedAttribute = selectedAttribute; 
 
     if (selectedDataType === "numerical") {
-        createHistogram("streams");
-    } else if (selectedDataType === "categorical") {
+        createHistogram(selectedAttribute);
+    }else if (selectedDataType === "categorical") {
         createBarGraph(selectedAttribute);
     }
 }
-
-createVisualization()
 </script>
+<script src = "bargraph.js"></script>
+<script src = "histogram.js"></script>
 </html>
