@@ -4,7 +4,8 @@ Weather
 
 
 
-Categorical 
+Categorical: 
+
 country
 location_name
 timezone
