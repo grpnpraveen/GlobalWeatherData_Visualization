@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav class="nav-max">
+    <nav class="nav-max" >
         <header>
-          <img src="./icon.jpg" style="width: 50px;border-radius: 8px;" alt="">
-          <h1>Buzz Songs</h1><span>2023</span>
+          <img src="./icon.png" style="width: 50px;border-radius: 8px;" alt="">
+          <h1>Global Weather</h1><span>2023</span>
         </header>
         <button id="toggle-nav-btn" class="circle"></button>
         <br>
@@ -43,9 +43,56 @@
                 <img src="./hist.png" style="width: 45px;border-radius: 8px;" alt="">
               <span>Numerical</span>
             </a>  
-            <div id="categorical" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
-              <input type="radio" id="temperature_celsius" name="color" value="Number 3">
-              <label>Condition</label>
+            <div style="overflow-x:scroll;height: 150px;">
+              <div onclick="show_cat(4)" id="cat4" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="temperature_celsius" name="color" value="Number 3">
+                <label>Temperature</label>
+              </div>
+              <div onclick="show_cat(5)" id="cat5" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="feels_like_celsius" name="color" value="Number 3">
+                <label>Feels like</label>
+              </div>
+              <div onclick="show_cat(6)" id="cat6" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="humidity" name="color" value="Number 3">
+                <label>Humidity</label>
+              </div>
+              <div onclick="show_cat(7)" id="cat7" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="uv_index" name="color" value="Number 3">
+                <label>UV index</label>
+              </div>
+              <div onclick="show_cat(8)" id="cat8" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="wind_kph" name="color" value="Number 3">
+                <label>Wind Speed</label>
+              </div>
+              <div onclick="show_cat(9)" id="cat9" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="gust_kph" name="color" value="Number 3">
+                <label>Gust Speed</label>
+              </div>
+              <div onclick="show_cat(10)" id="cat10" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="pressure_in" name="color" value="Number 3">
+                <label>Pressure</label>
+              </div>
+              <div onclick="show_cat(11)" id="cat11" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="visibility_km" name="color" value="Number 3">
+                <label>visibility</label>
+              </div>
+              <div onclick="show_cat(12)" id="cat12" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="air_quality_Ozone" name="color" value="Number 3">
+                <label>O3</label>
+              </div>
+              <div onclick="show_cat(13)" id="cat13" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="air_quality_Carbon_Monoxide" name="color" value="Number 3">
+                <label>CO</label>
+              </div>
+              <div onclick="show_cat(14)" id="cat14" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="air_quality_Nitrogen_dioxide" name="color" value="Number 3">
+                <label>NO2</label>
+              </div>
+              <div onclick="show_cat(15)" id="cat15" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                <input type="radio" id="air_quality_Sulphur_dioxide" name="color" value="Number 3">
+                <label>SO2</label>
+              </div>
+         
             </div>
           </li>
           <li>
@@ -115,14 +162,38 @@ phone.addListener(media)
 // DATA Visualization
 var data;
 var graph_heigth=100;
+var direction_toogle = document.getElementById("direction");
+var current_active=1;
+
+
+direction_toogle.addEventListener('change', function() {
+
+  show_cat(current_active);
+});
 // Load the CSV file  
 d3.csv("data.csv").then(function(csvData) {
     // Save the data globally
     data = csvData;
+    //console.log(data);
     //Create initial visualization upon page load
     createVisualization("condition_text");
     //createVisualization("wind_direction");
     //createVisualization("moon_phase");
+
+    //createVisualization("temperature_celsius");
+    //createVisualization("humidity");
+    //createVisualization("uv_index");
+    //createVisualization("wind_kph");
+    //createVisualization("pressure_in");
+    //createVisualization("visibility_km");
+    //createVisualization("air_quality_Carbon_Monoxide");
+    //createVisualization("visibility_km");
+    //createVisualization("air_quality_Carbon_Monoxide");
+    //createVisualization("air_quality_Ozone");
+    //createVisualization("air_quality_Nitrogen_dioxide");
+    //createVisualization("air_quality_Sulphur_dioxide");
+    //createVisualization("gust_kph");
+    //createVisualization("feels_like_celsius");
 }).catch(function(error) {
     // Handle any errors that occur during loading
     console.error("Error loading the CSV file:", error);
@@ -133,18 +204,18 @@ var data_info = {
   "wind_direction": {"type": "categorical", "heading":"Wind direction","x_title":"Directions","y_title":"Frequency"},
   "moon_phase": {"type": "categorical", "heading":"Moon phases","x_title":"Phase","y_title":"Frequency"},
 
-  "in_spotify_playlists": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "streams": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "in_apple_playlists": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "in_deezer_playlists": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "bpm": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "danceability_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "valence_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "energy_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "acousticness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "instrumentalness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "liveness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""},
-  "speechiness_%": {"type": "numerical", "heading":"","x_title":"","y_title":""}
+  "temperature_celsius": {"type": "numerical", "heading":"Global Temperature","x_title":"Temperature (c)","y_title":"Frequency"},
+  "humidity": {"type": "numerical", "heading":"Global Humidity","x_title":"Humidity","y_title":"Frequency"},
+  "uv_index": {"type": "numerical", "heading":"Global UV","x_title":"UV index","y_title":"Frequency"},
+  "wind_kph": {"type": "numerical", "heading":"Global Wind Speed","x_title":"Wind Speed (kph)","y_title":"Frequency"},
+  "pressure_in": {"type": "numerical", "heading":"Global Pressure","x_title":"Pressure (in)","y_title":"Frequency"},
+  "visibility_km": {"type": "numerical", "heading":"Global Visibility","x_title":"Visibility (km)","y_title":"Frequency"},
+  "air_quality_Carbon_Monoxide": {"type": "numerical", "heading":"Air Quality (CO)","x_title":"Carbon Monoxide (%)","y_title":"Frequency"},
+  "air_quality_Ozone": {"type": "numerical", "heading":"Air Quality (O3)","x_title":"Ozone (%)","y_title":"Frequency"},
+  "air_quality_Nitrogen_dioxide": {"type": "numerical", "heading":"Air Quality (NO2)","x_title":"Nitrogen Dioxide (%)","y_title":"Frequency"},
+  "air_quality_Sulphur_dioxide": {"type": "numerical", "heading":"Air Quality (SO2)","x_title":"Sulphur Dioxide (%)","y_title":"Frequency"},
+  "gust_kph": {"type": "numerical", "heading":"Speed of Gust","x_title":"speed (kph)","y_title":"Frequency"},
+  "feels_like_celsius": {"type": "numerical", "heading":"Feels like Temperature","x_title":"Temperature (c)","y_title":"Frequency"},
 };
 
 
@@ -181,8 +252,6 @@ function get_graph_data(attribute)
 
 // Function to create visualization based on user's selection
 function createVisualization(selectedAttribute) {
-    //var selectedDataType ="categorical";
-    //var selectedAttribute = "Key";
     console.log(data_info[selectedAttribute]["type"])
     var selectedDataType = data_info[selectedAttribute]["type"];
     var selectedAttribute = selectedAttribute; 
@@ -200,4 +269,5 @@ function createVisualization(selectedAttribute) {
 <script src = "bargraph.js"></script>
 <script src = "bargraph_hor.js"></script>
 <script src = "histogram.js"></script>
+<script src = "histogram_hor.js"></script>
 </html>

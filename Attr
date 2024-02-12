@@ -17,14 +17,18 @@ moon_phase
 Numerical: 
 
 temperature_celsius
+feels_like_celsius
 humidity
 uv_index
 wind_kph
+gust_kph
 pressure_in
 visibility_km
-air_quality_Carbon_Monoxide
 air_quality_Ozone
+air_quality_Carbon_Monoxide
 air_quality_Nitrogen_dioxide
 air_quality_Sulphur_dioxide
-moon_illumination
-feels_like_celsius
+
+
+
+","condition_text","wind_direction","moon_phase","temperature_celsius","feels_like_celsius","humidity","uv_index","wind_kph","gust_kph","pressure_in","visibility_km","air_quality_Ozone","air_quality_Carbon_Monoxide","air_quality_Nitrogen_dioxide","air_quality_Sulphur_dioxide
