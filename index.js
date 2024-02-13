@@ -3,6 +3,24 @@ function show_cat(data_num)
 {
   current_active = data_num;
 
+  const colorRadios = document.querySelectorAll('input[type="radio"][name="scatter"]');
+  colorRadios.forEach(radio => {
+    radio.checked = false;
+  });
+  const colorRadios2 = document.querySelectorAll('input[type="radio"][name="scatter2"]');
+  colorRadios2.forEach(radio => {
+    console.log("HEY");
+    radio.checked = false;
+  });
+  for(let i=1;i<16;i++)
+  {
+
+          document.getElementById("x"+i.toString()).style.background="#36393f";
+
+          document.getElementById("y"+i.toString()).style.background="#36393f";
+
+      
+  }
   let is_direction = direction_toogle.checked;
   console.log(direction_toogle.checked);
   let cat1,cat2,cat3;

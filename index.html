@@ -43,7 +43,7 @@
                 <img src="./hist.png" style="width: 45px;border-radius: 8px;" alt="">
               <span>Numerical</span>
             </a>  
-            <div id="menu" style="overflow:scroll;height: 150px;">
+            <div id="menu" style="overflow:scroll;height: 100px;">
               <div onclick="show_cat(4)" id="cat4" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
                 <input type="radio" id="temperature_celsius" name="color" value="Number 3">
                 <label>Temperature</label>
@@ -106,6 +106,146 @@
                 </a>  
                
             </li>
+          <li>
+            <li>
+              <a class="nav-link" href="#">
+                <img src="./scat.png" style="width: 45px;border-radius: 8px;" alt="">
+              <span>Scatter Plot</span>
+            </a>  
+           
+            <div id="menu" style="overflow:scroll;height: 150px;">
+              
+              
+              <div id="submenu" style="overflow:scroll;height: 100px;margin-left:30px;">
+                <h4>X-axis</h4>
+                <div onclick="show_scat('x1')" id="x1" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx1" name="scatter" value="Number 3">
+                  <label>Condition</label>
+                </div>
+                <div onclick="show_scat('x2')" id="x2" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx2" name="scatter" value="Number 3">
+                  <label>Direction</label>
+                </div>
+                <div onclick="show_scat('x3')" id="x3" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx3" name="scatter" value="Number 3">
+                  <label>Moon Phase</label>
+                </div>
+                <div onclick="show_scat('x4')" id="x4" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx4" name="scatter" value="Number 3">
+                  <label>Temp</label>
+                </div>
+                <div onclick="show_scat('x5')" id="x5" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx5" name="scatter" value="Number 3">
+                  <label>Feels Like</label>
+                </div>
+                <div onclick="show_scat('x6')" id="x6" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx6" name="scatter" value="Number 3">
+                  <label>Humidity</label>
+                </div>
+                <div onclick="show_scat('x7')" id="x7" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx7" name="scatter" value="Number 3">
+                  <label>UV</label>
+                </div>
+                <div onclick="show_scat('x8')" id="x8" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx8" name="scatter" value="Number 3">
+                  <label>Wind Speed</label>
+                </div>
+                <div onclick="show_scat('x9')" id="x9" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx9" name="scatter" value="Number 3">
+                  <label>Gust Speed</label>
+                </div>
+                <div onclick="show_scat('x10')" id="x10" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx10" name="scatter" value="Number 3">
+                  <label>Pressure</label>
+                </div>
+                <div onclick="show_scat('x11')" id="x11" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx11" name="scatter" value="Number 3">
+                  <label>Visibility</label>
+                </div>
+                <div onclick="show_scat('x12')" id="x12" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx12" name="scatter" value="Number 3">
+                  <label>O3</label>
+                </div>
+                <div onclick="show_scat('x13')" id="x13" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx13" name="scatter" value="Number 3">
+                  <label>CO</label>
+                </div>
+                <div onclick="show_scat('x14')" id="x14" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx14" name="scatter" value="Number 3">
+                  <label>NO2</label>
+                </div>
+                <div onclick="show_scat('x15')" id="x15" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="xx15" name="scatter" value="Number 3">
+                  <label>SO2</label>
+                </div>
+                </div>
+              </div>
+              <div id="submenu" style="overflow:scroll;height: 100px;margin-left:30px;margin-top:-30px;">
+                <h4>Y-axis</h4>
+                <div onclick="show_scat('y1')" id="y1" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy1" name="scatter2" value="Number 3">
+                  <label>Condition</label>
+                </div>
+                <div onclick="show_scat('y2')" id="y2" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy2" name="scatter2" value="Number 3">
+                  <label>Direction</label>
+                </div>
+                <div onclick="show_scat('y3')" id="y3" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy3" name="scatter2" value="Number 3">
+                  <label>Moon Phase</label>
+                </div>
+                <div onclick="show_scat('y4')" id="y4" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy4" name="scatter2" value="Number 3">
+                  <label>Temp</label>
+                </div>
+                <div onclick="show_scat('y5')" id="y5" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy5" name="scatter2" value="Number 3">
+                  <label>Feels Like</label>
+                </div>
+                <div onclick="show_scat('y6')" id="y6" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy6" name="scatter2" value="Number 3">
+                  <label>Humidity</label>
+                </div>
+                <div onclick="show_scat('y7')" id="y7" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy7" name="scatter2" value="Number 3">
+                  <label>UV</label>
+                </div>
+                <div onclick="show_scat('y8')" id="y8" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy8" name="scatter2" value="Number 3">
+                  <label>Wind Speed</label>
+                </div>
+                <div onclick="show_scat('y9')" id="y9" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy9" name="scatter2" value="Number 3">
+                  <label>Gust Speed</label>
+                </div>
+                <div onclick="show_scat('y10')" id="y10" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy10" name="scatter2" value="Number 3">
+                  <label>Pressure</label>
+                </div>
+                <div onclick="show_scat('y11')" id="y11" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy11" name="scatter2" value="Number 3">
+                  <label>Visibility</label>
+                </div>
+                <div onclick="show_scat('y12')" id="y12" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy12" name="scatter2" value="Number 3">
+                  <label>O3</label>
+                </div>
+                <div onclick="show_scat('y13')" id="y13" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy13" name="scatter2" value="Number 3">
+                  <label>CO</label>
+                </div>
+                <div onclick="show_scat('y14')" id="y14" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy14" name="scatter2" value="Number 3">
+                  <label>NO2</label>
+                </div>
+                <div onclick="show_scat('y15')" id="y15" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
+                  <input type="radio" id="yy15" name="scatter2" value="Number 3">
+                  <label>SO2</label>
+                </div>
+              </div>
+            </div> 
+               
+            </li>
         </ul>
       </nav>
 
@@ -121,6 +261,7 @@
 
 </body>
 <script src = "scatterplot.js"></script>
+<script src = "scatter_ui_logic.js"></script>
 <script src = "index.js"></script>
 <script src = "bargraph.js"></script>
 <script src = "bargraph_hor.js"></script>
@@ -173,8 +314,11 @@ var current_active=1;
 
 
 direction_toogle.addEventListener('change', function() {
+  if (current_active!=-1)
+  {
 
-  show_cat(current_active);
+    show_cat(current_active);
+  }
 });
 // Load the CSV file  
 d3.csv("data.csv").then(function(csvData) {
@@ -182,7 +326,7 @@ d3.csv("data.csv").then(function(csvData) {
     data = csvData;
     //console.log(data);
     //Create initial visualization upon page load
-    //createVisualization("condition_text");
+    createVisualization("condition_text");
     //createVisualization("wind_direction");
     //createVisualization("moon_phase");
 
@@ -202,12 +346,12 @@ d3.csv("data.csv").then(function(csvData) {
     //createVisualization("feels_like_celsius");
 
     //createScatterPlot("condition_text","condition_text");
-    createScatterPlot("temperature_celsius","uv_index");
+    //createScatterPlot("temperature_celsius","uv_index");
 }).catch(function(error) {
     // Handle any errors that occur during loading
     console.error("Error loading the CSV file:", error);
 });
-
+var columns = ["condition_text","wind_direction","moon_phase","temperature_celsius","feels_like_celsius","humidity","uv_index","wind_kph","gust_kph","pressure_in","visibility_km","air_quality_Ozone","air_quality_Carbon_Monoxide","air_quality_Nitrogen_dioxide","air_quality_Sulphur_dioxide"]
 var data_info = {
   "condition_text": {"type": "categorical", "heading":"Weather Condition","x_title":"Condition","y_title":"Frequency"},
   "wind_direction": {"type": "categorical", "heading":"Wind direction","x_title":"Directions","y_title":"Frequency"},

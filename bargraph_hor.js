@@ -52,7 +52,7 @@ function createHorBarGraph(attribute) {
       .attr("y", height + margin.bottom - 50 )
       .style("text-anchor", "middle")
       .style("fill", "#7da6ff") // Set text color to white
-      .text(data_info[attribute]["x_title"]);
+      .text(data_info[attribute]["y_title"]);
     
     svgBar.append("g")
       .attr("class", "y-axis")
@@ -69,7 +69,7 @@ function createHorBarGraph(attribute) {
       .attr("y", -margin.left + 40)
       .style("text-anchor", "middle")
       .style("fill", "#7da6ff") // Set text color to white
-      .text(data_info[attribute]["y_title"]);
+      .text(data_info[attribute]["x_title"]);
     
     // bars
     svgBar.selectAll("rect")
