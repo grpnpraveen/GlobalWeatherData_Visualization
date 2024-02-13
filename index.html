@@ -43,7 +43,7 @@
                 <img src="./hist.png" style="width: 45px;border-radius: 8px;" alt="">
               <span>Numerical</span>
             </a>  
-            <div style="overflow-x:scroll;height: 150px;">
+            <div id="menu" style="overflow:scroll;height: 150px;">
               <div onclick="show_cat(4)" id="cat4" style="border-radius:8px;margin-top:5px;;margin-left: 60px;padding-left:30px;height: 25px;background:#36393f;">
                 <input type="radio" id="temperature_celsius" name="color" value="Number 3">
                 <label>Temperature</label>
@@ -120,10 +120,16 @@
 
 
 </body>
+<script src = "scatterplot.js"></script>
+<script src = "index.js"></script>
+<script src = "bargraph.js"></script>
+<script src = "bargraph_hor.js"></script>
+<script src = "histogram.js"></script>
+<script src = "histogram_hor.js"></script>
 <script>
 const navBar = document.querySelector("nav")
 const toggleNavBtn = document.querySelector("#toggle-nav-btn")
-
+const menu= document.getElementById("menu")
 toggleNavBtn.addEventListener("click", (event) => {
   toggleNav()
 })
@@ -176,7 +182,8 @@ d3.csv("data.csv").then(function(csvData) {
     data = csvData;
     //console.log(data);
     //Create initial visualization upon page load
-    createVisualization("condition_text");
+    //createVisualization("condition_text");
+    createScatterPlot("condition_text","feels_like_celsius")
     //createVisualization("wind_direction");
     //createVisualization("moon_phase");
 
@@ -265,9 +272,5 @@ function createVisualization(selectedAttribute) {
 
 
 </script>
-<script src = "index.js"></script>
-<script src = "bargraph.js"></script>
-<script src = "bargraph_hor.js"></script>
-<script src = "histogram.js"></script>
-<script src = "histogram_hor.js"></script>
+
 </html>

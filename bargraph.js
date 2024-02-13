@@ -84,7 +84,7 @@ function createBarGraph(attribute) {
       .attr("y", (d, i) => YScale(Y[i]))
       .attr("width", XScale.bandwidth())
       .attr("height", (d, i) => height - margin.bottom - YScale(Y[i]))
-      .attr("fill", "#00796b");
+      .attr("fill", "steelblue");
     
     // values at the top of bars
     svgBar.selectAll(".value")

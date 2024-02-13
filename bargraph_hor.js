@@ -80,7 +80,7 @@ function createHorBarGraph(attribute) {
       .attr("x", 0) // Align bars to start from the left
       .attr("height", YScale.bandwidth())
       .attr("width", (d, i) => XScale(Y[i]))
-      .attr("fill", "#00796b");
+      .attr("fill", "steelblue");
     
     // values at the end of bars
     svgBar.selectAll(".value")
