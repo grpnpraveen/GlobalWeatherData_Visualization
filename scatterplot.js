@@ -36,6 +36,62 @@ function createScatterPlot(xAttribute, yAttribute) {
         .nice(); // Ensures a "nice" scale with round numbers
 
 
+
+
+
+        if(data_info[xAttribute].type=="categorical")
+        {
+            console.log("X cat");
+            cat_data1=Object.fromEntries(get_unique(data,xAttribute).map((str, index) => [str, index]))
+            console.log(cat_data1);
+            // cat_data1 = get_graph_data(xAttribute);
+            // Create scales
+            xScale = d3.scaleLinear()
+            .domain([0, Object.entries(cat_data1).length])
+            .range([0, width]);
+        }
+        if(data_info[yAttribute].type=="categorical")
+        {
+            console.log("Y cat");
+            cat_data2=Object.fromEntries(get_unique(data,yAttribute).map((str, index) => [str, index]))
+            console.log(cat_data2);
+
+            yScale = d3.scaleLinear()
+            .domain([0,Object.entries(cat_data2).length]) // Adjusted to use the min and max of the data
+            .range([height, 0])
+            .nice(); // Ensures a "nice" scale with round numbers
+        }
+
+        // PLOTTING 
+        if(cat_data1 && !cat_data2)  // first cat second num
+        {
+            console.log("1cat 2 num");
+            // Draw dots
+            svg.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => xScale(cat_data1[d[xAttribute]]))
+            .attr("cy", d => yScale(parseInt(d[yAttribute])))
+            .attr("r", 4)
+            .attr("fill", "steelblue")
+            .attr("opacity", 0.8);
+        }
+        if(!cat_data1 && cat_data2)  // first num second cat
+        {
+            console.log("1 num 2 cat");
+            // Draw dots
+            svg.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => xScale(parseInt(d[xAttribute])))
+            .attr("cy", d => yScale(cat_data2[d[yAttribute]]))
+            .attr("r", 4)
+            .attr("fill", "steelblue")
+            .attr("opacity", 0.8);
+         
+        }
         if(!cat_data1 && !cat_data2) // two num
         {
             console.log("2 num");
@@ -50,61 +106,20 @@ function createScatterPlot(xAttribute, yAttribute) {
                 .attr("fill", "steelblue")
                 .attr("opacity", 0.8);
         }
-
-
-        if(data_info[xAttribute].type=="categorical")
-        {
-            console.log("X cat");
-            cat_data1 = get_graph_data(xAttribute);
-            
-            // for(let i = 0; i<cat_data1.length;i++)
-            // {
-    
-                // }
-            cat_data1 = cat_data1.map(obj => {
-                console.log(temp_data[xAttribute]);
-                return obj.y_values;});
-    
-            console.log(cat_data1);
-            // Create scales
-            xScale = d3.scaleLinear()
-            .domain([0, d3.max(cat_data1, d => parseInt(d))])
-            .range([0, width]);
-        }
-        if(data_info[yAttribute].type=="categorical")
-        {
-            console.log("Y cat");
-            cat_data2 = get_graph_data(xAttribute);
-            cat_data2 = cat_data1.map(obj => obj.y_values);
-            // Create scales
-            xScale = d3.scaleLinear()
-            .domain([0, d3.max(cat_data1, d => parseInt(d))])
-            .range([0, width]);
-        }
-
-
-        if(cat_data1 && !cat_data2)  // first cat second num
-        {
-            
-        }
-        if(!cat_data1 && cat_data2)  // first num second cat
-        {
-         
-        }
-      
         if(cat_data1 && cat_data2) // two cat
         {
-    
+            console.log("2 cat");
+            // Draw dots
+            svg.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => xScale(cat_data1[d[xAttribute]]))
+            .attr("cy", d => yScale(cat_data2[d[yAttribute]]))
+            .attr("r", 4)
+            .attr("fill", "steelblue")
+            .attr("opacity", 0.8);
         }
-
-
-
-
-
-
-
-
-
 
 
     // Draw x-axis

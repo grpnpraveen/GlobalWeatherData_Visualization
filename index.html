@@ -183,7 +183,6 @@ d3.csv("data.csv").then(function(csvData) {
     //console.log(data);
     //Create initial visualization upon page load
     //createVisualization("condition_text");
-    createScatterPlot("condition_text","feels_like_celsius")
     //createVisualization("wind_direction");
     //createVisualization("moon_phase");
 
@@ -201,6 +200,9 @@ d3.csv("data.csv").then(function(csvData) {
     //createVisualization("air_quality_Sulphur_dioxide");
     //createVisualization("gust_kph");
     //createVisualization("feels_like_celsius");
+
+    //createScatterPlot("condition_text","condition_text");
+    createScatterPlot("temperature_celsius","uv_index");
 }).catch(function(error) {
     // Handle any errors that occur during loading
     console.error("Error loading the CSV file:", error);
