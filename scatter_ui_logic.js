@@ -1,11 +1,15 @@
 function show_scat(param)
 {
+    let x_scat,y_scat;
+  
     if(current_active!=-1)
     {
         document.getElementById("yy1").checked=true;
         document.getElementById("y1").style.background="#7da6ff";
         document.getElementById("xx1").checked=true;
         document.getElementById("x1").style.background="#7da6ff";
+        x_scat=1;
+        y_scat=1;
     }
     current_active = -1;
     const colorRadios = document.querySelectorAll('input[type="radio"][name="color"]');
@@ -41,11 +45,11 @@ function show_scat(param)
 
 //     if(param[0]=='x')
 //     {
-//         const colorRadios2 = document.querySelectorAll('input[type="radio"][name="scatter"]');
-//         colorRadios2.forEach(radio => {
-//             console.log(radio.id);
-//             // radio.checked = false;
-//         });
+        // const colorRadios2 = document.querySelectorAll('input[type="radio"][name="scatter"]');
+        // colorRadios2.forEach(radio => {
+        //     console.log(radio.id);
+        //    if(radio)
+        // });
 //     }
 //    else{
 //     const colorRadios2 = document.querySelectorAll('input[type="radio"][name="scatter2"]');
@@ -56,18 +60,32 @@ function show_scat(param)
 //    }
     let this_btn = document.getElementById(param).style.background="#7da6ff";
     let this_radio = document.getElementById(param[0]+param).checked=true;
-    let x_scat,y_scat;
-    x_scat=1;
-    y_scat=1;
+
     if(param[0]=="x")
     {
         x_scat = parseInt(param.substring(1));
+        const colorRadios2 = document.querySelectorAll('input[type="radio"][name="scatter2"]');
+        colorRadios2.forEach(radio => {
+            if(radio.checked)
+            {
+                console.log("FINEEE");
+                y_scat=radio.id.toString().substring(2);
+            } 
+    });
     }
     else{
         y_scat = parseInt(param.substring(1));
+        const colorRadios2 = document.querySelectorAll('input[type="radio"][name="scatter"]');
+        colorRadios2.forEach(radio => {
+            if(radio.checked)
+            {
+                console.log("FINEEE");
+                x_scat=radio.id.toString().substring(2);
+            } 
+    });
     }
     //show scatter
-    console.log(param.substring(1));    
+    console.log(y_scat);    
     createScatterPlot(columns[x_scat-1],columns[y_scat-1]);
 
 }
