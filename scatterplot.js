@@ -110,15 +110,32 @@ function createScatterPlot(xAttribute, yAttribute) {
         {
             console.log("2 cat");
             // Draw dots
-            svg.selectAll(".dot")
+            // svg.selectAll(".dot")
+            // .data(data)
+            // .enter().append("circle")
+            // .attr("class", "dot")
+            // .attr("cx", d => xScale(cat_data1[d[xAttribute]]))
+            // .attr("cy", d => yScale(cat_data2[d[yAttribute]]))
+            // .attr("r", 4)
+            // .attr("fill", "steelblue")
+            // .attr("opacity", 0.8);
+
+
+            svg.selectAll(".cluster")
             .data(data)
+            .enter().append("g")
+            .attr("class", "cluster")
+            .attr("transform", d => `translate(${xScale(cat_data1[d[xAttribute]])}, ${yScale(cat_data2[d[yAttribute]])})`)
+            .selectAll(".dot")
+            .data(d => Array.from({ length: 25 })) // Adjust the number of points in each cluster
             .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(cat_data1[d[xAttribute]]))
-            .attr("cy", d => yScale(cat_data2[d[yAttribute]]))
-            .attr("r", 4)
+            .attr("cx", () => Math.random() * 30) // Random displacement for x-coordinate within the cluster
+            .attr("cy", () => Math.random() * 30) // Random displacement for y-coordinate within the cluster
+            .attr("r", 2)
             .attr("fill", "steelblue")
             .attr("opacity", 0.8);
+
         }
 
 
@@ -154,6 +171,6 @@ function createScatterPlot(xAttribute, yAttribute) {
         .attr("y", -margin.top / 2)
         .attr("text-anchor", "middle")
         .style("font-size", "24px")
-        .text("Scatter Plot")
+        .text(data_info[yAttribute]["x_title"]+" vs "+data_info[xAttribute]["x_title"])
         .attr("fill", "white");
 }
