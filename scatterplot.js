@@ -158,7 +158,7 @@ svg.append("g")
     svg.append("text")
         .attr("transform", "rotate(-90)")
         .attr("x", -height / 2)
-        .attr("y", -margin.left + 20) // Adjusted y position for label
+        .attr("y", -margin.left + 19) // Adjusted y position for label
         .style("text-anchor", "middle")
         .text(data_info[yAttribute]["x_title"])
         .attr("fill", "white");
